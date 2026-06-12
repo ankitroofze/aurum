@@ -12,8 +12,9 @@ const AboutUs = () => {
       <WhatsAppFloat />
       <HeroSection />
        <TravelSection />
-      <WhatWeDoSection />    
+        
        <ExploreWorld />
+       <WhatWeDoSection />  
       <Footer />
     </div>
   );

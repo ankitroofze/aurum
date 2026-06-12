@@ -119,8 +119,8 @@
   padding-left: 0;
   position: relative;
   z-index: 2;
-  right: -155px;
-  top: 40px;
+  right: -105px;
+  top: 10px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -205,125 +205,98 @@
   }
 }
 
+/* ==================== */
+/* ONLY MOBILE CHANGES (max-width: 768px) */
+/* ==================== */
 @media (max-width: 768px) {
   .travel-section {
-    padding: 50px 20px;
+    padding: 40px 15px 60px 15px;  /* bottom padding badhaya */
+    overflow-x: hidden;
+    overflow-y: visible;
+    position: relative;
+    z-index: 1;
   }
   
   .travel-container {
-    gap: 30px;
+    gap: 25px;
     transform: translateX(0);
+    margin-bottom: 0;  /* margin hata diya */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
   }
   
+  /* Images section - Chota kiya */
   .travel-images {
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 8px;
     margin-right: 0;
+    width: 100%;
+    position: relative;
+    min-height: auto;
   }
   
-  .travel-content {
-    margin-left: 0;
+  .img-card {
+    width: 100% !important;
+    border-radius: 10px;
   }
   
   .img1 {
-    height: 120px !important;
+    height: 100px !important;
+    grid-column: 1;
+    grid-row: 1;
   }
   
   .img2 {
-    height: 200px !important;
+    height: 100px !important;
+    grid-column: 1;
+    grid-row: 2;
   }
   
   .img3 {
-    height: 220px !important;
+    height: 210px !important;
+    grid-column: 2;
+    grid-row: 1 / span 2;
     transform: none !important;
     top: 0 !important;
   }
   
+  .img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* World bg chota aur left mein */
   .world-bg {
-    width: 200px !important;
-    left: 50% !important;
-    transform: translateX(-50%);
-    top: -20px;
+    width: 150px !important;
+    left: -20px !important;
+    top: 20px !important;
+    transform: none !important;
+    opacity: 0.06;
+  }
+  
+  /* Shape chota */
+  .shape-a {
+    width: 80px !important;
+    right: -20px !important;
+    bottom: -10px !important;
     opacity: 0.08;
   }
   
-  .shape-a {
-    width: 120px !important;
-    right: -40px;
-    bottom: -20px;
-    opacity: 0.1;
-  }
-  
-  .badge-circle {
-    width: 100px !important;
-    height: 100px !important;
-    right: 20px;
-    top: -5px;
-  }
-  
-  .circle-center {
-    width: 40px !important;
-    height: 40px !important;
-  }
-  
-  .travel-content {
-    text-align: center !important;
-  }
-  
-  .travel-content p {
-    max-width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    font-size: 15px;
-  }
-  
-  .travel-content h2 {
-    font-size: 28px;
-    text-align: center;
-  }
-  
-  .sub-title {
-    text-align: center;
-    font-size: 14px;
-  }
-  
-  .travel-btn {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: inline-flex;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 576px) {
-  .travel-section {
-    padding: 40px 15px;
-  }
-  
-  .img1 {
-    height: 100px !important;
-  }
-  
-  .img2 {
-    height: 170px !important;
-  }
-  
-  .img3 {
-    height: 190px !important;
-  }
-  
-  .travel-images {
-    gap: 8px;
-  }
-  
-  .world-bg {
-    width: 160px !important;
-  }
-  
+  /* Circle Badge - Proper dikhne ke liye */
   .badge-circle {
     width: 80px !important;
     height: 80px !important;
-    right: 10px;
+    right: -15px !important;
+    top: -15px !important;
+    position: absolute;
+  }
+  
+  .circle-text {
+    width: 100%;
+    height: 100%;
   }
   
   .circle-center {
@@ -331,44 +304,89 @@
     height: 32px !important;
   }
   
-  .travel-content h2 {
-    font-size: 24px;
-  }
-  
-  .travel-content p {
-    font-size: 14px;
+  /* Text - Left side */
+  .travel-content {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-bottom: 20px !important;  /* bottom padding for spacing */
+    right: 0 !important;
+    top: 0 !important;
+    width: 100%;
+    position: relative;
+    clear: both;
   }
   
   .sub-title {
+    text-align: left !important;
     font-size: 13px;
+    margin-bottom: 8px;
   }
   
-  .travel-btn {
-    padding: 10px 20px;
+  .travel-content h2 {
+    font-size: 22px !important;
+    text-align: left !important;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  
+  .travel-content p {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     font-size: 13px;
+    line-height: 1.5;
+    padding: 0;
+  }
+  
+  /* Button fix - ab dikhega */
+  .travel-btn {
+    margin: 20px 0 0 0 !important;
+    padding: 12px 24px !important;
+    font-size: 14px !important;
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Ensure section has enough height */
+  .travel-section::after {
+    content: '';
+    display: table;
+    clear: both;
   }
 }
 
-@media (max-width: 480px) {
+/* Small Mobile - 576px */
+@media (max-width: 576px) {
+  .travel-section {
+    padding: 30px 12px 50px 12px;
+  }
+  
+  .travel-container {
+    gap: 20px;
+  }
+  
   .img1 {
-    height: 90px !important;
+    height: 85px !important;
   }
   
   .img2 {
-    height: 150px !important;
+    height: 85px !important;
   }
   
   .img3 {
-    height: 170px !important;
-  }
-  
-  .world-bg {
-    width: 140px !important;
+    height: 180px !important;
   }
   
   .badge-circle {
-    width: 70px !important;
-    height: 70px !important;
+    width: 65px !important;
+    height: 65px !important;
+    right: -10px !important;
+    top: -10px !important;
   }
   
   .circle-center {
@@ -376,12 +394,72 @@
     height: 28px !important;
   }
   
+  .world-bg {
+    width: 120px !important;
+    left: -15px !important;
+  }
+  
   .travel-content h2 {
-    font-size: 22px;
+    font-size: 20px !important;
   }
   
   .travel-content p {
-    font-size: 13px;
+    font-size: 12px;
+  }
+  
+  .travel-btn {
+    padding: 10px 20px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* Extra Small - 480px */
+@media (max-width: 480px) {
+  .travel-section {
+    padding: 25px 12px 45px 12px;
+  }
+  
+  .img1 {
+    height: 70px !important;
+  }
+  
+  .img2 {
+    height: 70px !important;
+  }
+  
+  .img3 {
+    height: 150px !important;
+  }
+  
+  .badge-circle {
+    width: 55px !important;
+    height: 55px !important;
+    right: -8px !important;
+    top: -8px !important;
+  }
+  
+  .circle-center {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  
+  .travel-content h2 {
+    font-size: 18px !important;
+  }
+  
+  .travel-content p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  
+  .travel-btn {
+    padding: 8px 18px !important;
+    font-size: 12px !important;
+    margin-top: 15px !important;
+  }
+  
+  .travel-content {
+    padding-bottom: 15px !important;
   }
 }
 

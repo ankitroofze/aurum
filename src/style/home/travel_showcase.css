@@ -80,7 +80,7 @@
 /* Desktop Button - Right side with Dark Blue */
 .trip-btn {
   border: none;
-  background: #1e3a8a !important; /* Dark Blue */
+  background: #1e3a8a !important;
   color: #ffffff !important;
   padding: 10px 25px;
   border-radius: 10px;
@@ -89,7 +89,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: auto; /* Right side */
+  margin-left: auto;
   margin-right: 0;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -99,8 +99,8 @@
 
 /* Desktop Button Hover - Yellow */
 .trip-btn:hover {
-  background: #ffc107 !important; /* Yellow background */
-  color: #1e3a8a !important; /* Dark Blue text */
+  background: #ffc107 !important;
+  color: #1e3a8a !important;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
 }
@@ -110,15 +110,22 @@
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-left: 60px;
 }
 
+/* MAIN IMAGE - STRICTLY VERTICAL (PORTRAIT) */
 .main-image {
   width: 100%;
-  max-width: 420px;
-  height: 550px;
+  max-width: 350px;
+  min-width: 280px;
+  height: auto;
+  min-height: 480px;
+  max-height: 580px;
   object-fit: cover;
   border-radius: 10px;
+  aspect-ratio: 2 / 3;
+  display: block;
 }
 
 .floating-image {
@@ -186,6 +193,13 @@
     width: 200px;
     height: 200px;
   }
+  
+  /* Maintain vertical on tablet */
+  .main-image {
+    max-width: 320px;
+    min-height: 440px;
+    max-height: 520px;
+  }
 }
 
 /* Tablet */
@@ -209,11 +223,12 @@
   }
 
   .floating-image {
-    width: 220px;
-    height: 220px;
-    left: 20px;
+    width: 200px;
+    height: 200px;
+    left: -40px;
     top: auto;
     bottom: -30px;
+    position: absolute;
   }
 
   .travel-text {
@@ -222,11 +237,19 @@
   
   .showcase-images {
     margin-left: 0;
+    justify-content: center;
   }
   
   .trip-btn {
     margin-left: auto;
     margin-right: 0;
+  }
+  
+  /* Keep vertical on tablet */
+  .main-image {
+    max-width: 340px;
+    min-height: 460px;
+    max-height: 540px;
   }
 }
 
@@ -238,17 +261,21 @@
     padding: 60px 5%;
   }
   
+  /* MAIN IMAGE - Keep vertical on mobile */
   .main-image {
-    height: 400px;
-    max-width: 100%;
+    max-width: 280px;
+    min-width: 240px;
+    min-height: 380px;
+    max-height: 460px;
+    aspect-ratio: 2 / 3;
   }
 
-  /* Floating image - Thoda left side overlap */
+  /* Floating image - Left side overlap */
   .floating-image {
-    width: 200px !important;
-    height: 200px !important;
-    bottom: -20px;
-    left: -30px !important; /* Left side shift for overlap */
+    width: 160px !important;
+    height: 160px !important;
+    bottom: -25px;
+    left: -20px !important;
     position: absolute;
     top: auto;
   }
@@ -300,14 +327,18 @@
 /* Small Mobile - 480px */
 @media (max-width: 480px) {
   .floating-image {
-    width: 150px !important;
-    height: 150px !important;
-    bottom: -15px;
-    left: -20px !important;
+    width: 130px !important;
+    height: 130px !important;
+    bottom: -20px;
+    left: -15px !important;
   }
   
+  /* Keep vertical orientation */
   .main-image {
-    height: 320px;
+    max-width: 240px;
+    min-width: 200px;
+    min-height: 340px;
+    max-height: 400px;
   }
   
   .trip-btn {
@@ -316,6 +347,6 @@
   }
 
   .travel-showcase {
-    background-size: contain, 220px;
+    background-size: contain, 200px;
   }
 }

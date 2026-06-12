@@ -7,11 +7,12 @@ import hero3 from "../../assets/hero-3.jpg";
 import hero4 from "../../assets/hero-4.jpg";
 import hero5 from "../../assets/hero-5.jpg";
 
+import airplane from "../../assets/airplane.png";
+
 const HeroSection = () => {
   const images = [hero1, hero2, hero3, hero4, hero5];
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto slide every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) =>
@@ -20,7 +21,7 @@ const HeroSection = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) =>
@@ -36,24 +37,34 @@ const HeroSection = () => {
 
   return (
     <section className="hero-section">
-      {/* Images */}
+      {/* Background Images */}
       {images.map((image, index) => (
         <img
           key={index}
           src={image}
           alt={`Hero ${index + 1}`}
-          className={`hero-image ${index === currentSlide ? "active" : ""}`}
+          className={`hero-image ${
+            index === currentSlide ? "active" : ""
+          }`}
         />
       ))}
 
       {/* Overlay */}
       <div className="hero-overlay"></div>
 
+      {/* Flying Plane */}
+      <img
+        src={airplane}
+        alt="Airplane"
+        className="flying-plane"
+      />
+
       {/* Content */}
       <div className="hero-content">
         <h1 className="hero-title">
           Explore The World With Us
         </h1>
+
         <p className="hero-description">
           Discover premium destinations, unforgettable journeys,
           and seamless travel experiences.
@@ -61,12 +72,18 @@ const HeroSection = () => {
       </div>
 
       {/* Left Arrow */}
-      <button onClick={prevSlide} className="hero-arrow hero-arrow-left">
+      <button
+        onClick={prevSlide}
+        className="hero-arrow hero-arrow-left"
+      >
         ‹
       </button>
 
       {/* Right Arrow */}
-      <button onClick={nextSlide} className="hero-arrow hero-arrow-right">
+      <button
+        onClick={nextSlide}
+        className="hero-arrow hero-arrow-right"
+      >
         ›
       </button>
     </section>

@@ -1,64 +1,58 @@
 import React from "react";
 import "../../style/home/popular_travel.css";
-import stickerImg from "../../assets/aurum-stickers.png"; // Apni path ke according adjust karna
+import stickerImg from "../../assets/aurum-stickers.png";
 
 const PopularTravel = () => {
   return (
-    <section className="popular-travel">
-      <div className="travel-container">
+    <section className="popular-travel-section">
+      <div className="popular-container">
 
-        {/* Left Top Image */}
-        <div className="travel-img travel-img-1">
+        <div className="popular-img popular-img-1">
           <img
             src="https://tourex-react.netlify.app/assets/img/about/about.jpg"
             alt="travel"
           />
         </div>
 
-        {/* Right Top Image */}
-        <div className="travel-img travel-img-2">
+        <div className="popular-img popular-img-2">
           <img
             src="https://tourex-react.netlify.app/assets/img/about/about-3.jpg"
             alt="travel"
           />
         </div>
 
-        {/* Content */}
-        <div className="travel-content">
-          {/* Sticker Added Here - Above Most Popular Tour */}
-          <div className="sticker-wrapper">
-            <img src={stickerImg} alt="sticker" className="travel-sticker" />
+        <div className="popular-content">
+          <div className="popular-sticker-wrapper">
+            <img src={stickerImg} alt="sticker" className="popular-sticker" />
           </div>
           
-          <h5>Most Popular Tour</h5>
+          <h5 className="popular-subtitle">Most Popular Tour</h5>
 
-          <h1>
+          <h1 className="popular-title">
             Let's Discover The World<br />
             With Our Excellent Eyes
           </h1>
 
-          <p>
+          <p className="popular-description">
             Whether you're looking for a romantic getaway, family-friendly
             vacation, or solo journey to explore the world, a travel agency <br />can
             provide tailored itinerary that exceeds your expectations.
           </p>
 
-          <button className="travel-btn">
+          <button className="popular-btn">
             TAKE A TOUR
             <span>→</span>
           </button>
         </div>
 
-        {/* Left Bottom Image */}
-        <div className="travel-img travel-img-3">
+        <div className="popular-img popular-img-3">
           <img
             src="https://tourex-react.netlify.app/assets/img/about/about-2.jpg"
             alt="travel"
           />
         </div>
 
-        {/* Right Bottom Image */}
-        <div className="travel-img travel-img-4">
+        <div className="popular-img popular-img-4">
           <img
             src="https://tourex-react.netlify.app/assets/img/about/about-4.jpg"
             alt="travel"

@@ -6,6 +6,7 @@
   padding: 96px 0;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
+  
 }
 
 .decorative-icon {
@@ -83,8 +84,6 @@
 .card:hover {
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
   transform: translateY(-8px);
-  /* background: #f5f5f5;
-   */
 }
 
 .icon-wrapper {
@@ -103,7 +102,6 @@
 
 .card:hover .icon-wrapper {
   transform: scale(1.1);
-  
 }
 
 .card-title {
@@ -129,9 +127,14 @@
   }
 }
 
+/* ==================== */
+/* ONLY MOBILE CHANGES (max-width: 768px) */
+/* Desktop pe kuch change nahi hoga */
+/* ==================== */
 @media (max-width: 768px) {
   .what-we-do-section {
     padding: 64px 0;
+    margin-top: 60px !important;  /* SIRF MOBILE ME TOP SE MARGIN ADD KIYA */
   }
   
   .cards-grid {
@@ -162,6 +165,7 @@
   
   .what-we-do-section {
     padding: 48px 0;
+    margin-top: 50px !important;  /* Chhoti screen mein thoda kam margin */
   }
   
   .main-title {
@@ -200,6 +204,7 @@
 @media (max-width: 480px) {
   .what-we-do-section {
     padding: 40px 0;
+    margin-top: 40px !important;  /* Aur chhoti screen mein kam margin */
   }
   
   .container {
@@ -224,5 +229,12 @@
     height: 44px;
     font-size: 18px;
     border-radius: 12px;
+  }
+}
+
+/* Desktop and Tablet (769px and above) - Bilkul same, koi change nahi */
+@media (min-width: 769px) {
+  .what-we-do-section {
+    margin-top: -150px;  /* Desktop ka original margin same rahega */
   }
 }

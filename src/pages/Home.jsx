@@ -8,10 +8,10 @@ import PromoSection from "../components/home/PromoSection";
 import TravelDestinations from "../components/home/TravelDestinations";
 import ExploreWorld from "../components/home/ExploreWorld";
 import Testimonials from "../components/home/Testimonials";
-import DestinationSection from "../components/home/DestinationSection";
+// import DestinationSection from "../components/home/DestinationSection";
 import WhyWorkWithUs from "../components/home/WhyWorkWithUs";
-import StatsSection from "../components/home/StatsSection";
-import ExploreDestinations from "../components/home/ExploreDestinations";
+// import StatsSection from "../components/home/StatsSection";
+// import ExploreDestinations from "../components/home/ExploreDestinations";
 import DownloadApp from "../components/home/DownloadApp";
 import WhatsAppFloat from "../components/common/WhatsAppFloat";
 
@@ -22,16 +22,16 @@ const Home = () => {
         <Header />
         <WhatsAppFloat />
         <HeroSection />
-        <PopularTravel />
         <TravelShowcase />
+        <PopularTravel />
         <PromoSection />
         <TravelDestinations />
         <ExploreWorld />
         <Testimonials />
-        <DestinationSection />
+        {/* <DestinationSection /> */}
         <WhyWorkWithUs />
-        <StatsSection />
-        <ExploreDestinations />
+        {/* <StatsSection /> */}
+        {/* <ExploreDestinations /> */}
         <DownloadApp />
 
         <Footer />

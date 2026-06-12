@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.tour-content-wrapper {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 15px;
+ 
+}
+
+.tour-card {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 22px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tour-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  color: #0f172a;
+  margin-bottom: 18px;
+}
+
+.tour-card p {
+  font-size: 18x;
+  line-height: 2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #555;
+}
+
+.tour-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  color: #0f172a;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.highlight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.check-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 50%;
+  background: #275aca;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.check-item p {
+  margin: 0;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #4c505b;
+  line-height: 1.5;
+}
+
+.amenities-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 30px;
+}
+
+/* Additional styling for amenity items */
+.amenities-grid .check-item {
+  margin-bottom: 0;
+}
+
+.amenities-grid .check-item p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #464647;
+}
+
+@media (max-width: 768px) {
+  .tour-card {
+    padding: 25px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .tour-card h2 {
+    font-size: 20px;
+  }
+
+  .tour-card h3 {
+    font-size: 17px;
+  }
+
+  .check-item p {
+    font-size: 14px;
+  }
+  
+  .tour-card p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
