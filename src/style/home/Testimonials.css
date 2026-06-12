@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+
+.testimonial-section {
+  padding: 70px 0;
+  background: #fff;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* HEADING */
+.testimonial-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.testimonial-heading span {
+  color: #5b21ff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+}
+
+.testimonial-heading h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #020617;
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.testimonial-heading p {
+  margin-top: 15px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* SLIDER */
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(420px * 12);
+  animation: scroll 30s linear infinite;
+}
+
+/* CARD */
+.testimonial-card {
+  width: 380px;
+  min-height: 260px;
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+  padding: 22px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* TOP */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* USER */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.user-info img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.user-info span {
+  color: #666;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* QUOTE */
+.quote {
+  font-size: 60px;
+  color: #d8d8d8;
+  line-height: 1;
+}
+
+/* REVIEW */
+.review {
+  margin-top: 18px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* STARS */
+.stars {
+  margin-top: 15px;
+  color: #f59e0b;
+  font-size: 18px;
+}
+
+/* ANIMATION */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-400px * 3));
+  }
+}
+
+/* ==================== */
+/* MOBILE ONLY CHANGES */
+/* ==================== */
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 50px 0;
+  }
+
+  /* Heading from niche (margin top kam) */
+  .testimonial-heading {
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+
+  .testimonial-heading h2 {
+    font-size: 28px;
+    margin-top: 8px;
+  }
+
+  /* Heading ke niche vale text - bada */
+  .testimonial-heading p {
+    font-size: 16px !important;
+    margin-top: 12px;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+
+  .testimonial-heading span {
+    font-size: 13px;
+  }
+
+  /* Cards - aur chota */
+  .testimonial-card {
+    width: 280px !important;
+    min-height: 240px;
+    padding: 18px;
+    margin-right: 15px;
+  }
+
+  /* User image chota */
+  .user-info img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .user-info h3 {
+    font-size: 14px;
+  }
+
+  .user-info span {
+    font-size: 11px;
+  }
+
+  /* Quote chota */
+  .quote {
+    font-size: 45px;
+  }
+
+  /* Review text chota */
+  .review {
+    font-size: 13px;
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+
+  /* Stars chota */
+  .stars {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  /* Slide track adjustment for smaller cards */
+  .slide-track {
+    width: calc(300px * 12);
+    animation: scrollMobile 30s linear infinite;
+  }
+}
+
+/* Small Mobile - 480px */
+@media (max-width: 480px) {
+  .testimonial-heading h2 {
+    font-size: 24px;
+  }
+
+  .testimonial-heading p {
+    font-size: 14px !important;
+  }
+
+  /* Cards aur chota */
+  .testimonial-card {
+    width: 260px !important;
+    min-height: 220px;
+    padding: 15px;
+    margin-right: 12px;
+  }
+
+  .user-info img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .user-info h3 {
+    font-size: 13px;
+  }
+
+  .user-info span {
+    font-size: 10px;
+  }
+
+  .quote {
+    font-size: 40px;
+  }
+
+  .review {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .stars {
+    font-size: 13px;
+  }
+
+  .slide-track {
+    width: calc(280px * 12);
+  }
+}
+
+/* Mobile Animation Keyframes */
+@keyframes scrollMobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-280px * 3));
+  }
+}

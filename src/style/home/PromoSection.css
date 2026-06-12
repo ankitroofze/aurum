@@ -1,0 +1,298 @@
+/* PromoSection.css */
+
+.promo-wrapper {
+  display: flex;
+  width: 85%;
+  height: 250px;
+  margin: 40px auto;
+  border-radius: 9px;
+  overflow: hidden;
+  margin-bottom: 100px;
+  min-height: 240px; /* Reduced from 300px */
+   font-family: 'Roboto', sans-serif;
+}
+
+.promo-image-section {
+  position: relative;
+  width: 55%;
+  overflow: hidden;
+}
+
+.promo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.promo-image-section:hover .promo-image {
+  transform: scale(1.05);
+}
+
+/* Professional Play Button */
+.play-btn-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.play-btn {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: #6d28d9;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  z-index: 2;
+}
+
+/* Pseudo-element animations */
+.play-btn::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  z-index: -1;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.6);
+  animation: borderanimate2 2s linear infinite;
+  transition: 0.3s ease-out;
+}
+
+.play-btn::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  height: 140%;
+  z-index: -2;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  animation: borderanimate3 2s linear infinite 0.5s;
+  transition: 0.3s ease-out;
+}
+
+.play-icon {
+  font-size: 24px;
+  margin-left: 4px; /* Centers the play triangle */
+  transition: transform 0.3s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.08);
+  background: #6d28d9;
+  color: white;
+  box-shadow: 0 0 20px rgba(109, 40, 217, 0.5);
+}
+
+.play-btn:hover .play-icon {
+  transform: scale(1.1);
+}
+
+.play-btn:hover::before,
+.play-btn:hover::after {
+  border-color: rgba(109, 40, 217, 0.6);
+}
+
+/* Keyframe Animations */
+@keyframes borderanimate2 {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border-width: 2px;
+  }
+  100% {
+    width: 180%;
+    height: 180%;
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+@keyframes borderanimate3 {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    border-width: 2px;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+/* Content Section */
+.promo-content-section {
+  width: 45%;
+  background-color: #081c68;
+  background-image: url("https://tourex-react.netlify.app/assets/img/shape.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 200px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 40px; /* Reduced padding */
+  /* font-family: "Poppins", sans-serif; */
+    font-family: "Roboto", sans-serif;
+}
+
+.promo-subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.promo-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.promo-btn {
+  width: fit-content;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 30px;
+  background: #651fff;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+    font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+.btn-arrow {
+  transition: transform 0.3s ease;
+  font-size: 16px;
+}
+
+.promo-btn:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(101, 31, 255, 0.4);
+}
+
+.promo-btn:hover .btn-arrow {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .promo-wrapper {
+    width: 90%;
+    min-height: 260px;
+  }
+
+  .promo-title {
+    font-size: 28px;
+  }
+
+  .promo-content-section {
+    padding: 25px 30px;
+    background-size: 150px;
+  }
+
+  .play-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .play-icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-wrapper {
+    flex-direction: column;
+    width: 95%;
+    min-height: auto;
+  }
+
+  .promo-image-section,
+  .promo-content-section {
+    width: 100%;
+  }
+
+  .promo-image-section {
+    min-height: 250px;
+  }
+
+  .promo-content-section {
+    text-align: center;
+    align-items: center;
+    padding: 35px 25px;
+    background-position: center bottom;
+    background-size: 180px;
+  }
+
+  .promo-title {
+    font-size: 28px;
+  }
+
+  .promo-btn {
+    margin-top: 5px;
+  }
+
+  .play-btn {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-title {
+    font-size: 24px;
+  }
+
+  .promo-subtitle {
+    font-size: 12px;
+  }
+
+  .promo-btn {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+
+  .play-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-icon {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,142 @@
+.download-section {
+  position: relative;
+  background: transparent;
+
+  /* overlap with next section */
+  margin-bottom: -60px;
+  z-index: 10;
+}
+
+.download-container {
+  max-width: 1080px;
+  margin: 0 auto;
+
+  /* banner.jpg ka size */
+  min-height: 110px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 80px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* dark overlay for readability */
+.download-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  border-radius: 10px;
+}
+
+.download-left,
+.download-content,
+.download-buttons {
+  position: relative;
+  z-index: 2;
+}
+
+.mobile-image {
+  width: 320px;
+  display: block;
+}
+
+.download-subtitle {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.download-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 10px;
+  max-width: 600px;
+}
+
+.download-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.store-btn {
+  width: 160px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* .store-btn:hover {
+  transform: translateY(-5px);
+} */
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 1200px) {
+  .download-container {
+    flex-direction: column;
+    text-align: center;
+
+    gap: 30px;
+    padding: 60px 30px;
+
+    min-height: auto;
+  }
+
+  .mobile-image {
+    width: 300px;
+  }
+
+  .download-title {
+    font-size: 34px;
+  }
+
+  .download-buttons {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .download-section {
+    margin-bottom: -80px;
+  }
+
+  .download-container {
+    padding: 50px 20px;
+    border-radius: 25px;
+  }
+
+  .mobile-image {
+    width: 0px;
+  }
+
+  .download-title {
+    font-size: 26px;
+  }
+
+  .download-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .store-btn {
+    width: 160px;
+  }
+}

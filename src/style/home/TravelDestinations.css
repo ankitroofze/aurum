@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+
+.travel-section {
+  position: relative;
+  padding: 30px 0;
+  background: transparent;
+  overflow: hidden;
+  margin-top: -80px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Left Background Shape */
+.travel-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  width: 260px;
+  height: 490px;
+  background: url("../assets/shape-2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1.18;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 5;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.heading-area {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sub-title {
+  color: #5a22ff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Main Heading */
+.main-title {
+  margin-top: 12px;
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #0a0a23;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Description */
+.description {
+  margin-top: 16px;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.7;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 4 Cards One Row - Desktop */
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: nowrap;
+}
+
+/* Card */
+.travel-card {
+  position: relative;
+  width: 260px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 22px;
+  border: 1px solid #dddcdc;
+  text-align: center;
+  z-index: 5;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Bottom Stack Effect */
+.travel-card::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: -8px;
+  height: 12px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 0 0 22px 22px;
+  z-index: -1;
+}
+
+.travel-card::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: -14px;
+  height: 12px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 0 0 20px 20px;
+  z-index: -2;
+}
+
+.card-layer {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  bottom: -20px;
+  height: 12px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 0 0 18px 18px;
+  z-index: -3;
+}
+
+.image-box {
+  position: relative;
+}
+
+.image-box img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 7px;
+  transition: transform 0.4s ease;
+}
+
+.travel-card:hover .image-box img {
+  transform: scale(1.08);
+}
+
+/* Small Badge */
+.tour-badge {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  background: #5a22ff;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Card Heading */
+.travel-card h3 {
+  margin-top: 28px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0a0a23;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Tablet */
+@media (max-width: 1200px) {
+  .cards-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ==================== */
+/* MOBILE ONLY CHANGES */
+/* ==================== */
+@media (max-width: 768px) {
+  /* Heading bada */
+  .main-title {
+    font-size: 36px !important;
+    margin-top: 8px;
+  }
+
+  /* Description bada */
+  .description {
+    font-size: 16px !important;
+    margin-top: 12px;
+    padding: 0 10px;
+  }
+
+  .sub-title {
+    font-size: 13px;
+  }
+
+  .heading-area {
+    margin-bottom: 40px;
+  }
+
+  /* Horizontal Scroll for Cards - 2 cards visible at a time */
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    gap: 20px;
+    padding: 10px 15px 25px 15px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /* Center the scroll container */
+    justify-content: flex-start;
+  }
+
+  /* Scrollbar styling - visible */
+  .cards-wrapper::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .cards-wrapper::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+    margin: 0 15px;
+  }
+
+  .cards-wrapper::-webkit-scrollbar-thumb {
+    background: #5a22ff;
+    border-radius: 10px;
+  }
+
+  .cards-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #3a0fcc;
+  }
+
+  /* Cards - Size for 2 cards visible */
+  .travel-card {
+    width: calc(50% - 10px) !important;
+    min-width: calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    padding: 12px;
+    scroll-snap-align: start;
+  }
+
+  .image-box img {
+    height: 160px !important;
+  }
+
+  .travel-card h3 {
+    font-size: 18px !important;
+    margin-top: 20px;
+  }
+
+  .tour-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+    bottom: -8px;
+  }
+
+  /* Card hover effect kam */
+  .travel-card:hover .image-box img {
+    transform: scale(1.04);
+  }
+
+  /* Stack effects adjust for smaller cards */
+  .travel-card::before {
+    left: 8px;
+    right: 8px;
+    bottom: -6px;
+    height: 10px;
+  }
+
+  .travel-card::after {
+    left: 14px;
+    right: 14px;
+    bottom: -11px;
+    height: 10px;
+  }
+
+  .card-layer {
+    left: 20px;
+    right: 20px;
+    bottom: -16px;
+    height: 10px;
+  }
+}
+
+/* Small Mobile - 480px */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 30px !important;
+  }
+
+  .description {
+    font-size: 14px !important;
+  }
+
+  .travel-card {
+    width: calc(50% - 8px) !important;
+    min-width: calc(50% - 8px);
+    max-width: calc(50% - 8px);
+  }
+
+  .image-box img {
+    height: 140px !important;
+  }
+
+  .travel-card h3 {
+    font-size: 16px !important;
+    margin-top: 16px;
+  }
+
+  .tour-badge {
+    font-size: 9px;
+    padding: 3px 8px;
+  }
+
+  .cards-wrapper {
+    gap: 16px;
+    padding: 10px 12px 25px 12px;
+  }
+}
+
+/* Extra Small Mobile - 400px */
+@media (max-width: 400px) {
+  .travel-card {
+    width: calc(50% - 6px) !important;
+    min-width: calc(50% - 6px);
+  }
+
+  .image-box img {
+    height: 130px !important;
+  }
+
+  .travel-card h3 {
+    font-size: 15px !important;
+  }
+
+  .cards-wrapper {
+    gap: 12px;
+  }
+}

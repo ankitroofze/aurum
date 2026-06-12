@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+
+.why-work-section {
+    width: 100%;
+    padding: 100px 80px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+.bridge-bg {
+    position: absolute;
+    left: 0;
+    top: 320px;
+    width: 180px;
+    opacity: 0.12;
+}
+
+.why-work-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.why-work-header span {
+    color: #5f22ff;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+
+.why-work-header h2 {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #08112d;
+    font-family: "Roboto", sans-serif;
+}
+
+.why-work-header p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    font-family: "Roboto", sans-serif;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.why-work-grid {
+    max-width: 1320px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.image-card {
+    height: 230px;
+    border-radius: 8px; /* Changed from 25px to 8px */
+    overflow: hidden;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.purple-card {
+    height: 230px;
+    border-radius: 8px; /* Changed from 25px to 8px */
+    background: linear-gradient(180deg, #6a1bff 0%, #4f11dc 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.card-icon {
+    width: 90px; /* Increased from 85px */
+    height: 90px; /* Increased from 85px */
+    object-fit: contain;
+    margin-bottom: 10px; /* Reduced gap from 18px to 10px */
+}
+
+.purple-card h3 {
+    font-size: 20px; /* Reduced from 34px */
+    font-weight: 600;
+    margin-bottom: 12px; /* Reduced from 15px */
+    font-family: "Roboto", sans-serif;
+}
+
+.purple-card p {
+    font-size: 13px; /* Reduced from 18px */
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    max-width: 90%;
+}
+
+@media (max-width: 992px) {
+    .why-work-section {
+        padding: 70px 20px;
+    }
+
+    .why-work-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .why-work-header h2 {
+        font-size: 32px;
+    }
+
+    .why-work-header p {
+        font-size: 14px;
+    }
+
+    .image-card,
+    .purple-card {
+        max-width: 400px;
+        width: 100%;
+        height: 270px;
+    }
+
+    .card-icon {
+        width: 85px;
+        height: 85px;
+    }
+
+    .purple-card h3 {
+        font-size: 26px;
+    }
+
+    .purple-card p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-work-section {
+        padding: 50px 15px;
+    }
+
+    .why-work-header h2 {
+        font-size: 28px;
+    }
+
+    .why-work-header p {
+        font-size: 13px;
+    }
+
+    .why-work-header span {
+        font-size: 14px;
+    }
+
+    .image-card,
+    .purple-card {
+        height: 250px;
+        max-width: 350px;
+    }
+
+    .card-icon {
+        width: 75px;
+        height: 75px;
+        margin-bottom: 8px;
+    }
+
+    .purple-card h3 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .purple-card p {
+        font-size: 13px;
+    }
+
+    .purple-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-card,
+    .purple-card {
+        height: 250px;
+        max-width: 390px;
+    }
+
+    .card-icon {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 6px;
+    }
+
+    .purple-card h3 {
+        font-size: 22px;
+        margin-bottom: 6px;
+    }
+
+    .purple-card p {
+        font-size: 12px;
+    }
+
+    .purple-card {
+        padding: 20px;
+    }
+}

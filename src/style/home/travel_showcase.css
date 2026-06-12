@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+.travel-showcase {
+  background: transparent;
+  padding: 90px 7%;
+  overflow: hidden;
+  background-image: url("https://tourex-react.netlify.app/assets/img/chose-shape-2.png"), url("../../assets/shape-world.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, 500px;
+  background-position: left, bottom left;
+  font-family: "Roboto", sans-serif;
+}
+
+.showcase-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.showcase-content {
+  flex: 1;
+  max-width: 550px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sub-heading {
+  color: #471de1;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.showcase-content h2 {
+  font-size: 38px;
+  line-height: 1.1;
+  color: #0b1020;
+  margin: 15px 0 25px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.showcase-text {
+  color: #444;
+  line-height: 1.7;
+  font-size: 18px;
+  margin-bottom: 23px;
+  font-family: "Roboto", sans-serif;
+}
+
+.feature-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 23px;
+}
+
+/* Custom icons for feature boxes */
+.feature-icon-img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  min-width: 55px;
+}
+
+.feature-box h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #101828;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.feature-box p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Desktop Button - Right side with Dark Blue */
+.trip-btn {
+  border: none;
+  background: #1e3a8a !important; /* Dark Blue */
+  color: #ffffff !important;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto; /* Right side */
+  margin-right: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Roboto", sans-serif;
+  width: fit-content;
+}
+
+/* Desktop Button Hover - Yellow */
+.trip-btn:hover {
+  background: #ffc107 !important; /* Yellow background */
+  color: #1e3a8a !important; /* Dark Blue text */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+.showcase-images {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-left: 60px;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 420px;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.floating-image {
+  position: absolute;
+  left: -120px;
+  top: 160px;
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.floating-image:hover {
+  transform: scale(1.05);
+}
+
+/* TRAVEL Text - Only Border Color Changes */
+.travel-text {
+  position: absolute;
+  right: -75px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: 10px;
+  opacity: 0.6;
+  font-family: "sans-serif", sans-serif;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  animation: borderColorChange 8s ease-in-out infinite;
+}
+
+/* Border Color Animation */
+@keyframes borderColorChange {
+  0% {
+    -webkit-text-stroke-color: #1d5cff;
+  }
+  25% {
+    -webkit-text-stroke-color: #ffc107;
+  }
+  50% {
+    -webkit-text-stroke-color: #dc3545;
+  }
+  75% {
+    -webkit-text-stroke-color: #28a745;
+  }
+  100% {
+    -webkit-text-stroke-color: #1d5cff;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .travel-text {
+    font-size: 80px;
+    right: -60px;
+    -webkit-text-stroke-width: 1.5px;
+  }
+  
+  .floating-image {
+    left: -80px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .showcase-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .showcase-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .showcase-content h2 {
+    font-size: 40px;
+  }
+
+  .feature-box {
+    text-align: left;
+  }
+
+  .floating-image {
+    width: 220px;
+    height: 220px;
+    left: 20px;
+    top: auto;
+    bottom: -30px;
+  }
+
+  .travel-text {
+    display: none;
+  }
+  
+  .showcase-images {
+    margin-left: 0;
+  }
+  
+  .trip-btn {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+/* ==================== */
+/* MOBILE ONLY CHANGES (max-width: 768px) */
+/* ==================== */
+@media (max-width: 768px) {
+  .travel-showcase {
+    padding: 60px 5%;
+  }
+  
+  .main-image {
+    height: 400px;
+    max-width: 100%;
+  }
+
+  /* Floating image - Thoda left side overlap */
+  .floating-image {
+    width: 200px !important;
+    height: 200px !important;
+    bottom: -20px;
+    left: -30px !important; /* Left side shift for overlap */
+    position: absolute;
+    top: auto;
+  }
+
+  .showcase-content h2 {
+    font-size: 32px;
+  }
+
+  .feature-box h4 {
+    font-size: 20px;
+  }
+  
+  .feature-box p {
+    font-size: 16px;
+  }
+  
+  .showcase-text {
+    font-size: 16px;
+  }
+  
+  .sub-heading {
+    font-size: 16px;
+  }
+
+  /* Map sticker - Text ke niche */
+  .travel-showcase {
+    background-image: url("https://tourex-react.netlify.app/assets/img/chose-shape-2.png"), url("../../assets/shape-world.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, 280px;
+    background-position: left, center bottom;
+  }
+
+  /* Mobile Button - Dark Blue, Center */
+  .trip-btn {
+    background: #1e3a8a !important;
+    color: #ffffff !important;
+    margin: 0 auto !important;
+    padding: 10px 28px;
+    font-size: 15px;
+  }
+  
+  /* Mobile Button Hover */
+  .trip-btn:hover {
+    background: #ffc107 !important;
+    color: #1e3a8a !important;
+  }
+}
+
+/* Small Mobile - 480px */
+@media (max-width: 480px) {
+  .floating-image {
+    width: 150px !important;
+    height: 150px !important;
+    bottom: -15px;
+    left: -20px !important;
+  }
+  
+  .main-image {
+    height: 320px;
+  }
+  
+  .trip-btn {
+    padding: 8px 24px;
+    font-size: 14px;
+  }
+
+  .travel-showcase {
+    background-size: contain, 220px;
+  }
+}

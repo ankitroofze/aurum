@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+
+.explore-world {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.subtitle {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  color: #fff;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Updated Button */
+.trip-btn {
+  background: #e8ddff;
+  color: #5b21ff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+
+  /* Left shift */
+  margin-left: -80px;
+}
+
+.trip-btn:hover {
+  transform: translateY(-3px);
+}
+
+.big-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 90px;
+  font-weight: 900;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  font-family: 'sans-serif', sans-serif;
+}
+
+.scroll-top {
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: #5b21ff;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .explore-world {
+    height: 500px;
+  }
+
+  .content {
+    margin-top: 90px;
+    padding: 0 20px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .trip-btn {
+    padding: 10px 22px;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+
+    /* Mobile me center rakho */
+    margin-left: 0;
+  }
+
+  .big-text {
+    font-size: 32px;
+    bottom: 25px;
+    font-family: 'sans-serif', sans-serif;
+  }
+
+  .scroll-top {
+    width: 42px;
+    height: 42px;
+    right: 15px;
+    bottom: 15px;
+    font-size: 16px;
+  }
+}

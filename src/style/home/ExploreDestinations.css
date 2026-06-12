@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+
+.explore-section {
+  padding: 60px 80px 80px 80px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 300px;
+  position: relative;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  margin-top: -60px;
+}
+
+/* HEADER */
+.explore-header {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.explore-header h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+  font-family: "Roboto", sans-serif;
+}
+
+/* ARROWS - Desktop only */
+.arrows {
+  position: absolute;
+  right: 80px;
+  top: 85px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.arrows button {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: #f3f3f3;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+.arrows button:hover {
+  background: #6a00ff;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* SLIDER CONTAINER */
+.slider-container {
+  margin-top: 40px;
+  overflow: hidden;
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* TRACK - Infinite scroll */
+.slider-track {
+  display: flex;
+  gap: 25px;
+  will-change: transform;
+  width: fit-content;
+}
+
+/* CARD */
+.explore-card {
+  flex: 0 0 auto;
+  width: 247px;
+  height: 285px;
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+  font-family: "Roboto", sans-serif;
+}
+
+.explore-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.explore-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* FOOTER */
+.card-footer {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.explore-card:hover .card-footer {
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-footer span {
+  font-weight: 600;
+  font-size: 15px;
+  color: #222;
+  font-family: "Roboto", sans-serif;
+}
+
+/* CARD BUTTON */
+.card-arrow {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #f3f3f3;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-arrow:hover {
+  background: #6a00ff;
+  color: white;
+  transform: rotate(45deg);
+}
+
+/* DOTS CONTAINER */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot.active {
+  width: 30px;
+  border-radius: 5px;
+  background: #6a00ff;
+}
+
+.dot:hover {
+  background: #6a00ff;
+  transform: scale(1.2);
+}
+
+/* ==================== */
+/* RESPONSIVE */
+/* ==================== */
+@media (max-width: 1200px) {
+  .explore-section {
+    padding: 50px 40px 70px 40px;
+  }
+  
+  .arrows {
+    right: 40px;
+    top: 75px;
+  }
+}
+
+@media (max-width: 992px) {
+  .explore-header h2 {
+    font-size: 30px;
+  }
+}
+
+/* ==================== */
+/* MOBILE - Cards visible, infinite scroll works */
+/* ==================== */
+@media (max-width: 768px) {
+  .explore-section {
+    padding: 40px 15px 50px 15px;
+    overflow-x: hidden;
+  }
+  
+  /* Hide arrows on mobile */
+  .arrows {
+    display: none !important;
+  }
+  
+  .explore-header {
+    text-align: center;
+  }
+  
+  .explore-header h2 {
+    font-size: 24px;
+  }
+  
+  .slider-container {
+    margin-top: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  
+  /* Custom scrollbar */
+  .slider-container::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .slider-container::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+  }
+  
+  .slider-container::-webkit-scrollbar-thumb {
+    background: #6a00ff;
+    border-radius: 10px;
+  }
+  
+  .slider-track {
+    gap: 15px;
+    width: max-content;
+  }
+  
+  /* 2 cards visible on mobile */
+  .explore-card {
+    width: 220px;
+    min-width: 220px;
+    height: 260px;
+  }
+  
+  .card-footer {
+    padding: 8px 12px;
+  }
+  
+  .card-footer span {
+    font-size: 12px;
+  }
+  
+  .card-arrow {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+  
+  .dots-container {
+    margin-top: 25px;
+    gap: 8px;
+  }
+  
+  .dot {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .dot.active {
+    width: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .explore-card {
+    width: 200px;
+    min-width: 200px;
+    height: 240px;
+  }
+  
+  .explore-header h2 {
+    font-size: 22px;
+  }
+  
+  .slider-track {
+    gap: 12px;
+  }
+  
+  .card-footer {
+    padding: 6px 10px;
+  }
+  
+  .card-footer span {
+    font-size: 11px;
+  }
+  
+  .card-arrow {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
+  
+  .dot {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .dot.active {
+    width: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-card {
+    width: 180px;
+    min-width: 180px;
+    height: 220px;
+  }
+  
+  .slider-track {
+    gap: 10px;
+  }
+}

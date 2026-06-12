@@ -1,0 +1,58 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f6f6f6;
+  color: #111827;
+  overflow-x: hidden;
+}
+
+/* ROOT */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* IMAGES */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* LIST */
+ul,
+ol {
+  list-style: none;
+}
+
+/* BUTTON */
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* INPUT */
+input,
+textarea,
+select {
+  font-family: inherit;
+}

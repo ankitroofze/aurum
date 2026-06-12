@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+.popular-travel {
+  width: 100%;
+  padding: 100px 0;
+  background: #f8f8f8;
+  overflow: hidden;
+}
+
+.travel-container {
+  max-width: 1400px;
+  margin: auto;
+  position: relative; 
+  height: 100%;
+  max-height: 350px;
+}
+
+/* CENTER CONTENT */
+.travel-content {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 70px;
+  margin-left: 350px;
+  position: relative;
+  z-index: 2;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Sticker Styles - Fixed: Sticker upar, content same position */
+.sticker-wrapper {
+  position: absolute;
+  top: -50px;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.travel-sticker {
+  width: 580px;
+  height: auto;    
+  animation: float 9s ease-in-out infinite;
+}
+
+.travel-content h5 {
+  color: #5f2eff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 140px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.travel-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #0d1028;
+  margin-bottom: 25px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -1px;
+}
+
+.travel-content p {
+  max-width: 700px;
+  margin: 0 auto 15px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #555;
+  margin-left: -20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Desktop Button */
+.travel-btn {
+  background: #beb1ea;
+  color: #683bd3;
+  border: none;
+  padding: 10px 32px;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s;
+  margin-left: 100px;
+  height: 45px;
+  margin-bottom: 190px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Desktop Button Hover - Yellow */
+.travel-btn:hover {
+  background: #ffc107 !important; /* Yellow background */
+  color: #1e3a8a !important; /* Dark Blue text */
+}
+
+.travel-btn span {
+  font-size: 24px;
+}
+
+/* IMAGES */
+.travel-img {
+  position: absolute;
+}
+
+.travel-img img {
+  width: 100%;
+  height: 100%;
+  max-width: 250px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* TOP LEFT */
+.travel-img-1 {
+  width: 300px;
+  height: 220px;
+  left: 40px;
+  top: 0;
+}
+
+/* TOP RIGHT */
+.travel-img-2 {
+  width: 300px;
+  height: 220px;
+  right: 40px;
+  top: 0;
+}
+
+/* BOTTOM LEFT */
+.travel-img-3 {
+  width: 200px;
+  height: 150px;
+  left: 110px;
+  bottom: -80px;
+}
+
+/* BOTTOM RIGHT */
+.travel-img-4 {
+  width: 200px;
+  height: 150px;
+  right: 160px;
+  bottom: -80px;
+}
+
+/* RESPONSIVE - 1200px */
+@media (max-width: 1200px) {
+  .travel-content h1 {
+    font-size: 38px;
+  }
+
+  .travel-img-1,
+  .travel-img-2 {
+    width: 220px;
+    height: 170px;
+  }
+  
+  .travel-img-3,
+  .travel-img-4 {
+    width: 170px;
+    height: 130px;
+  }
+  
+  .travel-img-3 {
+    left: 80px;
+  }
+  
+  .travel-img-4 {
+    right: 80px;
+  }
+  
+  .travel-sticker {
+    width: 580px;
+  }
+}
+
+/* ==================== */
+/* ONLY MOBILE CHANGES (max-width: 992px) */
+/* Desktop pe kuch change nahi hoga */
+/* ==================== */
+@media (max-width: 992px) {
+  .popular-travel {
+    padding: 60px 0;
+  }
+  
+  .travel-container {
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Reduced gap */
+    padding: 0;
+    position: relative;
+  }
+
+  /* Sab images ko static aur full width */
+  .travel-img {
+    position: static;
+    width: 100% !important;
+    margin: 0;
+  }
+
+  .travel-img img {
+    max-width: 100% !important;
+    width: 100%;
+    height: auto;
+    border-radius: 2px !important;
+  }
+
+  /* Top Images - Bada kiya */
+  .travel-img-1,
+  .travel-img-2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+    margin: 0;
+  }
+  
+  .travel-img-1 img,
+  .travel-img-2 img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  /* Bottom Images - Bada kiya */
+  .travel-img-3,
+  .travel-img-4 {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+    margin: 0;
+  }
+  
+  .travel-img-3 img,
+  .travel-img-4 img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  /* Text Content - Center me */
+  .travel-content {
+    position: static;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Sticker - Bada kiya aur gap kam */
+  .sticker-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-bottom: 5px; /* Reduced gap */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .travel-sticker {
+    width: 320px !important; /* Bada sticker */
+    max-width: 80%;
+    height: auto;
+  }
+
+  /* Text Center with reduced gaps */
+  .travel-content h5 {
+    margin-left: 0;
+    margin-bottom: 5px; /* Reduced gap */
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .travel-content h1 {
+    font-size: 32px;
+    margin: 5px 0; /* Reduced gap */
+    text-align: center;
+  }
+
+  .travel-content p {
+    margin: 0 auto 8px; /* Reduced gap */
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  /* Button - Right side me with white text */
+  .travel-btn {
+    margin: 0 0 0 auto !important; /* Right side */
+    margin-bottom: 0 !important;
+    background: #1e3a8a; /* Dark Blue background */
+    color: #ffffff !important; /* White text */
+    display: inline-flex;
+    justify-content: center;
+  }
+  
+  /* Button Hover for Mobile */
+  .travel-btn:hover {
+    background: #ffc107 !important; /* Yellow background on hover */
+    color: #1e3a8a !important; /* Dark Blue text on hover */
+  }
+
+  /* Order fix for mobile */
+  .travel-img-1 {
+    order: 1;
+  }
+  
+  .travel-img-2 {
+    order: 2;
+  }
+  
+  .travel-content {
+    order: 3;
+  }
+  
+  .travel-img-3 {
+    order: 4;
+  }
+  
+  .travel-img-4 {
+    order: 5;
+  }
+}
+
+/* Mobile - 768px */
+@media (max-width: 768px) {
+  .travel-img-1 img,
+  .travel-img-2 img {
+    height: 280px;
+  }
+  
+  .travel-img-3 img,
+  .travel-img-4 img {
+    height: 230px;
+  }
+  
+  .travel-content h1 {
+    font-size: 28px;
+  }
+  
+  .travel-content p {
+    font-size: 13px;
+  }
+  
+  .travel-sticker {
+    width: 300px !important;
+  }
+  
+  .travel-btn {
+    padding: 10px 28px;
+    font-size: 15px;
+  }
+  
+  .travel-btn span {
+    font-size: 18px;
+  }
+}
+
+/* Mobile - 576px */
+@media (max-width: 576px) {
+  .popular-travel {
+    padding: 30px 0;
+  }
+  
+  .travel-img-1 img,
+  .travel-img-2 img {
+    height: 250px;
+  }
+  
+  .travel-img-3 img,
+  .travel-img-4 img {
+    height: 200px;
+  }
+  
+  .travel-content h1 {
+    font-size: 24px;
+   
+  }
+  
+  .travel-content p {
+    font-size: 12px;
+  }
+  
+  .travel-content h5 {
+    font-size: 14px;
+  }
+  
+  .travel-btn {
+    padding: 8px 24px;
+    font-size: 14px;
+  }
+  
+  .travel-btn span {
+    font-size: 16px;
+  }
+  
+  .travel-sticker {
+    width: 280px !important;
+  }
+}
