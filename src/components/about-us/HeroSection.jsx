@@ -52,10 +52,10 @@ const HeroSection = () => {
       {/* Content */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-4">
         <h1 className="text-3xl md:text-5xl font-bold font-roboto">
-          Contact With Us
+          About Us
         </h1>
         <p className="mt-4 text-sm md:text-base text-gray-200 font-roboto">
-          Home &gt; Pages &gt; Contact
+          Home &gt; Pages &gt; About Us
         </p>
       </div>
 

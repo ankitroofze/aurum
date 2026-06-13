@@ -1,7 +1,7 @@
 import Header from "../components/common/header";
 import Footer from "../components/common/Footer";
 
-import HeroSection from "../components/home/HeroSection";
+import HeroSection from "../components/home/Herosection";
 import PopularTravel from "../components/home/popular_travel";
 import TravelShowcase from "../components/home/travel_showcase";
 import PromoSection from "../components/home/PromoSection";
