@@ -1,0 +1,248 @@
+/* Container and Section Setup */
+.contact-section {
+  position: relative;
+  padding: 5rem 0; /* py-20 equivalent */
+  background-color: #ffffff;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1280px; /* max-w-7xl */
+  margin: 0 auto;
+  padding: 0 1.25rem; /* px-5 */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  width: 100%;
+}
+
+/* Background Tree Styling */
+.bg-tree-shape {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 260px;
+  opacity: 0.4;
+  filter: brightness(0.5);
+  pointer-events: none;
+  z-index: 0;
+  display: none; /* Mobile पर छुपा दिया ताकि क्लटर न हो */
+}
+
+/* LEFT CARD: Info block */
+.contact-info-card {
+  background-color: #F7F7F7;
+  border-radius: 20px;
+  padding: 1.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.info-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0B0F2F;
+  margin-bottom: 1.25rem;
+}
+
+.info-desc {
+  color: #4b5563; /* text-gray-600 */
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #0B0F2F;
+}
+
+.info-details p {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.info-details .label {
+  font-weight: 500;
+}
+
+.info-details .value {
+  font-weight: 600;
+}
+
+/* Responsive Map Framework */
+.map-container {
+  margin-top: 2rem;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* मोबाइल पर आटोमेटिक रेश्यो सेट रहेगा */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(1) contrast(1.25) brightness(0.9);
+}
+
+/* RIGHT SIDE: Form styling */
+.contact-form-wrapper {
+  width: 100%;
+}
+
+.form-main-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0B0F2F;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.form-sub-desc {
+  margin-top: 1rem;
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Form Fields Styling */
+.contact-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.form-row-two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 0.875rem 1.25rem;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-textarea {
+  resize: none;
+}
+
+.form-input:focus, .form-textarea:focus {
+  border-color: #5B2EFF;
+  box-shadow: 0 0 0 3px rgba(91, 46, 255, 0.15);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* Checkbox Alignment */
+.form-checkbox-label {
+  display: flex;
+  align-items: start;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-checkbox {
+  margin-top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  accent-color: #5B2EFF;
+  flex-shrink: 0;
+}
+
+/* Button Styling */
+.btn-wrapper {
+  padding-top: 0.5rem;
+}
+
+.form-submit-btn {
+  width: 100%; /* मोबाइल पर फुल विड्थ ताकि टच रिस्पांस बढ़िया मिले */
+  background-color: #5B2EFF;
+  color: #ffffff;
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease;
+}
+
+.form-submit-btn:hover {
+  background-color: #4720d6;
+}
+
+.hide-on-mobile {
+  display: none;
+}
+
+/* ---------------------------------------------------
+   MEDIA QUERIES (Layout को टूटने से बचाने का असली जादू)
+   --------------------------------------------------- */
+
+/* Small Devices (Tablets and Up) */
+@media (min-width: 640px) {
+  .bg-tree-shape {
+    display: block; /* बड़ी स्क्रीन पर पेड़ आ जाएगा */
+  }
+  .form-main-title {
+    font-size: 2.25rem;
+  }
+  .form-submit-btn {
+    width: auto; /* डेस्कटॉप/टैबलेट पर नार्मल विड्थ */
+  }
+  .hide-on-mobile {
+    display: inline;
+  }
+}
+
+/* Medium Devices (Desktops / Large Tablets) */
+@media (min-width: 768px) {
+  .form-row-two-col {
+    grid-template-columns: 1fr 1fr; /* दो कॉलम लेआउट चालू */
+  }
+}
+
+/* Large Screens (Laptops and Up) */
+@media (min-width: 1024px) {
+  .contact-container {
+    grid-template-columns: 430px minmax(0, 1fr); /* आपकी डिज़ाइन के अनुसार फिक्स्ड और फ्लेक्सिबल ग्रिड */
+    gap: 3.5rem;
+    padding: 0 2rem;
+  }
+  .contact-section {
+    padding: 5rem 0;
+  }
+  .map-container {
+    height: 224px; /* lg:h-56 equivalent */
+    aspect-ratio: auto;
+  }
+}

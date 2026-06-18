@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.vs-section {
+  padding: 40px 15px;
+  background: #f8fafc;
+  font-family: "Inter", sans-serif;
+}
+
+.vs-container {
+  max-width: 900px; /* Reduced max-width since cards are smaller */
+  margin: auto;
+}
+
+/* Heading Section */
+.vs-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.vs-subtitle {
+  display: inline-block;
+  color: #0d4c92;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.vs-title {
+  font-size: 24px;
+  color: #16213e;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.vs-intro {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Grid - Forces 3 small cards in one row, centered */
+.vs-grid-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap; /* Prevents wrapping on desktop */
+}
+
+/* Individual Small Cards */
+.vs-item-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 15px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  width: 240px; /* Fixed small width */
+  min-height: 240px; /* Ensures they all look uniform */
+  display: flex;
+  flex-direction: column;
+}
+
+.vs-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(13, 76, 146, 0.1);
+}
+
+.vs-item-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  /* background: linear-gradient(90deg, #0d4c92, #2a7de1); */
+  border-radius: 12px 12px 0 0;
+}
+
+/* Icon Box */
+.vs-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0d4c92, #2a7de1);
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+/* Card Text Elements */
+.vs-card-title {
+  font-size: 15px;
+  color: #16213e;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.vs-card-text {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/* Feature List */
+.vs-feature-list {
+  list-style: none;
+  margin-top: auto; /* Pushes list to the bottom evenly */
+}
+
+.vs-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.vs-feature-list li:last-child {
+  margin-bottom: 0;
+}
+
+.vs-feature-list li svg {
+  color: #18b65b;
+  min-width: 14px;
+  font-size: 14px;
+}
+
+/* Responsive - Handles smaller screens smoothly */
+@media (max-width: 768px) {
+  .vs-grid-wrapper {
+    flex-wrap: wrap; /* Allows wrapping only on tablets/mobile */
+  }
+  
+  .vs-item-card {
+    width: 200px; /* Even smaller on tablet */
+  }
+}
+
+@media (max-width: 500px) {
+  .vs-grid-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .vs-item-card {
+    width: 90%; /* Full width on tiny mobile screens */
+    max-width: 280px;
+  }
+}

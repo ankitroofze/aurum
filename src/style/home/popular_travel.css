@@ -149,6 +149,141 @@
     transform: translateY(-20px);
   }
 } */
+.travel-btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+  margin-left: 50px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.travel-action-btn {
+  width: 200px;          /* Fixed equal width */
+  height: 52px;          /* Fixed equal height */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 14px;
+  border-radius: 12px;
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+
+  box-sizing: border-box;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+}
+
+.btn-text {
+  flex: 1;
+  text-align: center;
+
+  margin: 0 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.arrow-icon {
+  font-size: 13px;
+}
+
+/* INTERNATIONAL */
+.international-btn {
+  background: #351c75;
+  color: #fff;
+}
+
+.international-btn .btn-icon {
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+}
+
+/* DOMESTIC */
+.domestic-btn {
+  background: #ffc107;
+  color: #0b1020;
+}
+
+.domestic-btn .btn-icon {
+  border: 2px solid rgba(0,0,0,0.2);
+  color: #0b1020;
+}
+
+.travel-action-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .travel-btn-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .travel-action-btn {
+    width: 220px;
+    height: 50px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .travel-btn-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .travel-action-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .travel-btn-group {
+    justify-content: center;
+  }
+
+  .travel-action-btn {
+    width: 100%;
+    min-width: 100%;
+    padding: 16px 22px;
+  }
+
+  .btn-text {
+    font-size: 14px;
+  }
+
+  .btn-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+  }
+}
 
 @media (max-width: 1200px) {
   .popular-title {

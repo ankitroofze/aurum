@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+   background: #ffffff;
+    padding: 50px 20px;
+}
+
+/* ==============================================
+   HEADER - Chota
+   ============================================== */
+.section-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-header span {
+  display: inline-block;
+  color: #0d4c92;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.section-header h2 {
+  font-size: 26px;
+  color: #1a202c;
+  font-weight: 700;
+}
+
+/* ==============================================
+   CARDS - Chota, Simple White
+   ============================================== */
+.why-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.why-card {
+  background: #ffffff;
+  width: calc(25% - 12px);
+  padding: 20px 16px 22px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(13, 76, 146, 0.08);
+}
+
+/* ==============================================
+   ICON - Dark Blue
+   ============================================== */
+.why-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8edf5;
+  border-radius: 12px;
+  font-size: 20px;
+  color: #0d4c92;
+  transition: all 0.3s ease;
+}
+
+.why-card:hover .why-icon {
+  background: #0d4c92;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* ==============================================
+   TEXT - Chota
+   ============================================== */
+.why-card h3 {
+  font-size: 16px;
+  color: #1a202c;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.why-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ==============================================
+   RESPONSIVE
+   ============================================== */
+@media (max-width: 992px) {
+  .why-card {
+    width: calc(50% - 10px);
+    padding: 18px 14px 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-us {
+    padding: 40px 15px;
+  }
+  
+  .section-header h2 {
+    font-size: 20px;
+  }
+  
+  .why-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-card {
+    width: 100%;
+    padding: 16px 14px 18px;
+  }
+  
+  .section-header h2 {
+    font-size: 18px;
+  }
+  
+  .why-card h3 {
+    font-size: 15px;
+  }
+  
+  .why-card p {
+    font-size: 12px;
+  }
+}

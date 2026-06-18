@@ -1,6 +1,10 @@
 import React from "react";
 import "../../style/home/popular_travel.css";
 import stickerImg from "../../assets/aurum-stickers.png";
+import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
+import { FaGlobeAmericas } from "react-icons/fa";
+import { FaMapMarkedAlt } from "react-icons/fa";
 
 const PopularTravel = () => {
   return (
@@ -39,10 +43,35 @@ const PopularTravel = () => {
             provide tailored itinerary that exceeds your expectations.
           </p>
 
-          <button className="popular-btn">
+          {/* <button className="popular-btn">
             TAKE A TOUR
             <span>→</span>
-          </button>
+          </button> */}
+                <div className="travel-btn-group">
+            <Link to="/international-travels" className="travel-action-btn international-btn">
+              <span className="btn-icon">
+                <FaGlobeAmericas />
+              </span>
+          
+              <span className="btn-text">
+                INTERNATIONAL TOURS
+              </span>
+          
+              <FaArrowRight className="arrow-icon" />
+            </Link>
+          
+            <Link to="/domestic-travels" className="travel-action-btn domestic-btn">
+              <span className="btn-icon">
+                <FaMapMarkedAlt />
+              </span>
+          
+              <span className="btn-text">
+                DOMESTIC TOURS
+              </span>
+          
+              <FaArrowRight className="arrow-icon" />
+            </Link>
+          </div>
         </div>
 
         <div className="popular-img popular-img-3">

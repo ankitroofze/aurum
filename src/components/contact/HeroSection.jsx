@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import hero1 from "../../assets/hero-1.jpg";
 import hero2 from "../../assets/hero-2.jpg";
@@ -68,16 +69,18 @@ const HeroSection = () => {
       {/* Controls */}
       <button
         onClick={prevSlide}
-        className="absolute left-3 md:left-6 top-1/2 z-30 flex h-8 w-8 md:h-10 md:w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-md hover:bg-white/30 transition-all duration-300 text-xl md:text-2xl"
+        className="absolute left-3 md:left-6 top-1/2 z-30 flex h-8 w-8 md:h-10 md:w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-md hover:bg-white/30 transition-all duration-300 text-base md:text-xl"
+        aria-label="Previous slide"
       >
-        ‹
+        <FaArrowLeft />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-3 md:right-6 top-1/2 z-30 flex h-8 w-8 md:h-10 md:w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-md hover:bg-white/30 transition-all duration-300 text-xl md:text-2xl"
+        className="absolute right-3 md:right-6 top-1/2 z-30 flex h-8 w-8 md:h-10 md:w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-md hover:bg-white/30 transition-all duration-300 text-base md:text-xl"
+        aria-label="Next slide"
       >
-        ›
+        <FaArrowRight />
       </button>
 
     </section>

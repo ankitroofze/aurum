@@ -2,6 +2,7 @@ import React from "react";
 import "../../style/home/travel_showcase.css";
 import { FaArrowRight } from "react-icons/fa";
 
+
 // Import your custom images
 import blueWorld from "../../assets/blue-world.png";  // Best Travel Agency ke liye
 import blueBag from "../../assets/blue-bag.png";      // Secure Journey ke liye
@@ -58,9 +59,11 @@ const TravelShowcase = () => {
             </div>
           </div>
 
-          <button className="trip-btn">
+          <button className="travel_showcase-btn">
             BOOK YOUR TRIP <FaArrowRight />
           </button>
+
+    
         </div>
 
         {/* Right Images */}

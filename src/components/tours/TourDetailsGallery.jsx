@@ -68,7 +68,7 @@ const TourDetailsGallery = () => {
         <img
           src={images[activeImage]}
           alt=""
-          className="main-image"
+          className="tour-main-image"
         />
 
         <button className="nav-btn left" onClick={prevSlide}>

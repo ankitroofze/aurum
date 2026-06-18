@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cruise-cta {
+  position: relative;
+  min-height: 400px;
+  background-image: url("https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=2000");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* Simple overlay - only for text readability */
+.cruise-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 15, 32, 0.6);
+}
+
+.cruise-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+/* ==============================================
+   TAG - Chota
+   ============================================== */
+.cta-tag {
+  display: inline-block;
+  color: #d4af37;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* ==============================================
+   HEADING - Chota
+   ============================================== */
+.cruise-content h2 {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+/* ==============================================
+   PARAGRAPH - Chota
+   ============================================== */
+.cruise-content p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto 28px;
+}
+
+/* ==============================================
+   BUTTONS - Chota
+   ============================================== */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #d4af37;
+  color: #0a1a2e;
+  border: none;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  background: #c49a2a;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.primary-btn svg {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.primary-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-3px);
+}
+
+.secondary-btn svg {
+  font-size: 14px;
+}
+
+/* ==============================================
+   RESPONSIVE
+   ============================================== */
+@media (max-width: 992px) {
+  .cruise-content h2 {
+    font-size: 28px;
+  }
+  
+  .cruise-cta {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cruise-cta {
+    min-height: 320px;
+  }
+  
+  .cruise-content {
+    padding: 20px 15px;
+  }
+  
+  .cruise-content h2 {
+    font-size: 24px;
+  }
+
+  .cruise-content p {
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+
+  .cta-buttons {
+    gap: 12px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    padding: 10px 22px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cruise-cta {
+    min-height: 280px;
+  }
+  
+  .cruise-content h2 {
+    font-size: 20px;
+  }
+
+  .cruise-content p {
+    font-size: 13px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+  
+  .cta-tag {
+    font-size: 10px;
+  }
+}

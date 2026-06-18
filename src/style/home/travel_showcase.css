@@ -2,13 +2,16 @@
 
 .travel-showcase {
   background: transparent;
-  padding: 90px 7%;
+  padding: 60px 7%;
   overflow: hidden;
   background-image: url("https://tourex-react.netlify.app/assets/img/chose-shape-2.png"), url("../../assets/shape-world.png");
   background-repeat: no-repeat, no-repeat;
   background-size: contain, 500px;
   background-position: left, bottom left;
   font-family: "Roboto", sans-serif;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .showcase-container {
@@ -16,10 +19,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 60px;
+  width: min(100%, 1400px);
+  margin: 0 auto;
 }
 
 .showcase-content {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   max-width: 550px;
   font-family: 'Roboto', sans-serif;
 }
@@ -78,7 +84,7 @@
 }
 
 /* Desktop Button - Right side with Dark Blue */
-.trip-btn {
+.travel_showcase-btn {
   border: none;
   background: #1e3a8a !important;
   color: #ffffff !important;
@@ -89,7 +95,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: auto;
+  margin-left: 20px;
   margin-right: 0;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -98,7 +104,7 @@
 }
 
 /* Desktop Button Hover - Yellow */
-.trip-btn:hover {
+.travel_showcase-btn:hover {
   background: #ffc107 !important;
   color: #1e3a8a !important;
   transform: translateY(-2px);
@@ -106,18 +112,20 @@
 }
 
 .showcase-images {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 60px;
+  margin-left: clamp(20px, 3vw, 60px);
+  width: 100%;
 }
 
 /* MAIN IMAGE - STRICTLY VERTICAL (PORTRAIT) */
 .main-image {
   width: 100%;
-  max-width: 350px;
+  max-width: 406px;
   min-width: 280px;
   height: auto;
   min-height: 480px;
@@ -130,14 +138,16 @@
 
 .floating-image {
   position: absolute;
-  left: -120px;
-  top: 160px;
-  width: 230px;
-  height: 230px;
+  left: clamp(-18px, -2vw, -120px);
+  top: clamp(90px, 18vw, 160px);
+  width: min(230px, 40vw);
+  height: min(230px, 40vw);
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease;
+  max-width: 230px;
+  max-height: 230px;
 }
 
 .floating-image:hover {
@@ -147,13 +157,13 @@
 /* TRAVEL Text - Only Border Color Changes */
 .travel-text {
   position: absolute;
-  right: -75px;
+  right: clamp(-58px, -2vw, -75px);
   top: 50%;
   transform: translateY(-50%) rotate(180deg);
   writing-mode: vertical-rl;
-  font-size: 100px;
+  font-size: clamp(60px, 7vw, 100px);
   font-weight: 700;
-  letter-spacing: 10px;
+  letter-spacing: clamp(4px, 0.6vw, 10px);
   opacity: 0.6;
   font-family: "sans-serif", sans-serif;
   color: transparent;
@@ -179,6 +189,8 @@
     -webkit-text-stroke-color: #1d5cff;
   }
 }
+
+
 
 /* Responsive */
 @media (max-width: 1200px) {
@@ -240,7 +252,7 @@
     justify-content: center;
   }
   
-  .trip-btn {
+  .travel_showcase-btn {
     margin-left: auto;
     margin-right: 0;
   }
@@ -309,7 +321,7 @@
   }
 
   /* Mobile Button - Dark Blue, Center */
-  .trip-btn {
+  .travel_showcase-btn {
     background: #1e3a8a !important;
     color: #ffffff !important;
     margin: 0 auto !important;
@@ -318,7 +330,7 @@
   }
   
   /* Mobile Button Hover */
-  .trip-btn:hover {
+  .travel_showcase-btn:hover {
     background: #ffc107 !important;
     color: #1e3a8a !important;
   }
@@ -341,7 +353,7 @@
     max-height: 400px;
   }
   
-  .trip-btn {
+  .travel_showcase-btn {
     padding: 8px 24px;
     font-size: 14px;
   }

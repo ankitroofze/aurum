@@ -2,12 +2,13 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* इससे पैडिंग और बॉर्डर की वजह से लेआउट नहीं टूटता */
 }
 
 /* SMOOTH SCROLL */
 html {
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 /* BODY */
@@ -15,13 +16,28 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #f6f6f6;
   color: #111827;
-  overflow-x: hidden;
+  overflow-x: hidden; /* इससे साइड स्क्रॉल (horizonal scroll) की दिक्कत खत्म हो जाएगी */
+  width: 100%;
 }
 
-/* ROOT */
+/* ROOT (React Main Container) */
 #root {
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 
+  💡 सुपर टिप: अब आपको अपने Home, About, Contact आदि पेजेस के अंदर 
+  जो भी मेन कंटेनर या सेक्शन होंगे, उनमें नीचे दी गई क्लास (.container) लगा देनी है।
+  इससे आपका कंटेंट 1400px तक ही फैलेगा और बड़ी स्क्रीन पर अपने आप बीच में आ जाएगा।
+*/
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; /* बड़ी स्क्रीन पर कंटेंट को हमेशा बीच में रखेगा */
+  padding: 0 20px; /* मोबाइल और छोटी स्क्रीन पर साइड से गैप देगा ताकि कंटेंट चिपके नहीं */
 }
 
 /* LINKS */
@@ -32,7 +48,8 @@ a {
 
 /* IMAGES */
 img {
-  max-width: 100%;
+  max-width: 100%; /* इमेज कभी अपनी बाउंड्री से बाहर नहीं भागेगी */
+  height: auto;
   display: block;
 }
 
@@ -55,4 +72,39 @@ input,
 textarea,
 select {
   font-family: inherit;
+  max-width: 100%;
+}
+
+/* 1. सबसे पहले ब्राउज़र के डिफ़ॉल्ट लेआउट और मार्जिन को पूरी तरह ब्लॉक करो */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden; /* स्क्रीन के बाहर राइट साइड में कुछ भी भागने नहीं देगा */
+  background-color: #f6f6f6; /* जो गैप नीचे दिख रहा है उसे भी कवर करेगा */
+}
+
+/* 2. React का जो मेन रूट डिव है, उसे स्क्रीन के दोनों कोनों से सटाओ */
+#root {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* 3. फूटर को फ़ोर्स करो कि वो पूरी स्क्रीन की चौड़ाई (Edge to Edge) ले */
+.footer-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box;
+}
+
+/* 4. सुपर टिप: अगर किसी कंपोनेंट या नैवबार ने अजीब विड्थ ले रखी है तो उसे रीसेट करो */
+header, nav, section, main {
+  width: 100%;
+  box-sizing: border-box;
 }

@@ -72,13 +72,12 @@
   backdrop-filter: blur(4px);
   border: none;
   color: white;
-  font-size: 2rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: monospace;
 }
 
 .hero-arrow:hover {

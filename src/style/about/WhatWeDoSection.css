@@ -3,10 +3,9 @@
 .what-we-do-section {
   position: relative;
   background: #F7F7F7;
-  padding: 96px 0;
+  padding: 6px 0;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
-  
 }
 
 .decorative-icon {
@@ -24,6 +23,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  background: #f7f7f7;
 }
 
 .heading-wrapper {

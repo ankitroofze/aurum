@@ -2,12 +2,14 @@
 
 .promo-wrapper {
   display: flex;
-  width: 85%;
-  height: 250px;
+  width: 100%;
+  max-width: 1090px;
+  height: 260px;
   margin: 40px auto;
   border-radius: 9px;
   overflow: hidden;
-  margin-bottom: 100px;
+  
+  /* margin-bottom: 100px; */
   min-height: 240px; /* Reduced from 300px */
    font-family: 'Roboto', sans-serif;
 }
