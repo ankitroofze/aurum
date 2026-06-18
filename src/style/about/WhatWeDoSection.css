@@ -2,8 +2,8 @@
 
 .what-we-do-section {
   position: relative;
-  background: #F7F7F7;
-  padding: 6px 0;
+  background: #ffffff;
+  padding: 40px 0;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
 }
@@ -70,7 +70,7 @@
 }
 
 .card {
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius: 18px;
   padding: 24px;
   min-height: 260px;

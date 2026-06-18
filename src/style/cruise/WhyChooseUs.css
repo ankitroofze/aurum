@@ -1,19 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-
+/* ==============================================
+   CONTAINER & UTILITIES
+   ============================================== */
 .container {
   max-width: 1100px;
   margin: 0 auto;
-   background: #ffffff;
-    padding: 50px 20px;
+  background: #ffffff;
+  padding: 50px 20px 60px; /* Top padding thoda aur sahi kiya */
+  position: relative;
 }
 
 /* ==============================================
-   HEADER - Chota
+   HEADER (Cards ke ekdum paas kar diya)
    ============================================== */
 .section-header {
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 20px; /* FIXED: Margins ekdum kam kar diya taaki cards ke paas aa jaye */
 }
 
 .section-header span {
@@ -21,74 +24,145 @@
   color: #0d4c92;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 2px; /* Gaps minimal kiya */
 }
 
 .section-header h2 {
   font-size: 26px;
   color: #1a202c;
   font-weight: 700;
+  margin: 0; 
 }
 
 /* ==============================================
-   CARDS - Chota, Simple White
+   WHY CARDS - ROW SETUP
    ============================================== */
 .why-cards {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 20px;
   flex-wrap: wrap;
-}
-
-.why-card {
-  background: #ffffff;
-  width: calc(25% - 12px);
-  padding: 20px 16px 22px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.why-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(13, 76, 146, 0.08);
+  padding: 10px 0; /* Unnecessary internal gap bhi kam kiya */
 }
 
 /* ==============================================
-   ICON - Dark Blue
+   THE WHY CARD BASE STYLE & 3D STACK LAYER
+   ============================================== */
+.why-card {
+  background: #ffffff;
+  width: calc(25% - 15px);
+  padding: 24px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative; 
+  z-index: 1;
+  text-align: center;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              border-color 0.3s;
+}
+
+/* Hidden Piche Wale Cards Layer Setup */
+.why-card::before,
+.why-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Layer 1 (Sabse piche) */
+.why-card::before {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+/* Layer 2 (Bich me) */
+.why-card::after {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+/* HOVER EFFECT - Card Upar Jayega Aur Piche Wale Cards Niklenge */
+.why-card:hover {
+  transform: translateY(-12px); 
+  z-index: 10;
+}
+
+/* Hover Pe Piche Wale Dono Cards Bahar Dikhenge */
+.why-card:hover::before {
+  opacity: 0.5;
+  transform: translateY(6px) scale(0.92); 
+}
+
+.why-card:hover::after {
+  opacity: 0.8;
+  transform: translateY(12px) scale(0.85); 
+}
+
+/* ==============================================
+   LUDO PREMIUM THEME COLOR ASSIGNMENTS
+   ============================================== */
+
+/* Card 1: Ludo Red */
+.why-card:nth-child(1) { border-bottom: 4px solid #ef4444; }
+.why-card:nth-child(1) .why-icon { background: #fee2e2; color: #ef4444; }
+.why-card:nth-child(1):hover { border-color: #ef4444; box-shadow: 0 15px 30px rgba(239, 68, 68, 0.1); }
+.why-card:nth-child(1):hover::before, .why-card:nth-child(1):hover::after { border-bottom: 3px solid #ef4444; }
+
+/* Card 2: Ludo Green */
+.why-card:nth-child(2) { border-bottom: 4px solid #22c55e; }
+.why-card:nth-child(2) .why-icon { background: #dcfce7; color: #22c55e; }
+.why-card:nth-child(2):hover { border-color: #22c55e; box-shadow: 0 15px 30px rgba(34, 197, 94, 0.1); }
+.why-card:nth-child(2):hover::before, .why-card:nth-child(2):hover::after { border-bottom: 3px solid #22c55e; }
+
+/* Card 3: Ludo Yellow */
+.why-card:nth-child(3) { border-bottom: 4px solid #eab308; }
+.why-card:nth-child(3) .why-icon { background: #fef9c3; color: #eab308; }
+.why-card:nth-child(3):hover { border-color: #eab308; box-shadow: 0 15px 30px rgba(234, 179, 8, 0.1); }
+.why-card:nth-child(3):hover::before, .why-card:nth-child(3):hover::after { border-bottom: 3px solid #eab308; }
+
+/* Card 4: Ludo Blue */
+.why-card:nth-child(4) { border-bottom: 4px solid #3b82f6; }
+.why-card:nth-child(4) .why-icon { background: #dbeafe; color: #3b82f6; }
+.why-card:nth-child(4):hover { border-color: #3b82f6; box-shadow: 0 15px 30px rgba(59, 130, 246, 0.1); }
+.why-card:nth-child(4):hover::before, .why-card:nth-child(4):hover::after { border-bottom: 3px solid #3b82f6; }
+
+/* Dynamic Icon Scaling on Hover */
+.why-card:hover .why-icon {
+  transform: scale(1.05);
+  filter: brightness(0.95);
+}
+
+/* ==============================================
+   TEXT & ICON BASE STYLES
    ============================================== */
 .why-icon {
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 12px;
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e8edf5;
-  border-radius: 12px;
+  border-radius: 10px;
   font-size: 20px;
-  color: #0d4c92;
   transition: all 0.3s ease;
 }
 
-.why-card:hover .why-icon {
-  background: #0d4c92;
-  color: #ffffff;
-  transform: scale(1.05);
-}
-
-/* ==============================================
-   TEXT - Chota
-   ============================================== */
 .why-card h3 {
   font-size: 16px;
   color: #1a202c;
   margin-bottom: 8px;
   font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .why-card p {
@@ -99,12 +173,12 @@
 }
 
 /* ==============================================
-   RESPONSIVE
+   RESPONSIVE DESIGN
    ============================================== */
 @media (max-width: 992px) {
   .why-card {
     width: calc(50% - 10px);
-    padding: 18px 14px 20px;
+    margin-bottom: 15px; 
   }
   
   .section-header h2 {
@@ -113,8 +187,8 @@
 }
 
 @media (max-width: 768px) {
-  .why-choose-us {
-    padding: 40px 15px;
+  .container {
+    padding: 30px 15px;
   }
   
   .section-header h2 {
@@ -129,9 +203,13 @@
 }
 
 @media (max-width: 576px) {
+  .why-cards {
+    gap: 25px; 
+  }
+
   .why-card {
     width: 100%;
-    padding: 16px 14px 18px;
+    padding: 20px 16px;
   }
   
   .section-header h2 {

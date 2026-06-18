@@ -13,7 +13,7 @@ const AboutUs = () => {
       <HeroSection />
        <TravelSection />
         
-       <ExploreWorld />
+       {/* <ExploreWorld /> */}
        <WhatWeDoSection />  
       <Footer />
     </div>

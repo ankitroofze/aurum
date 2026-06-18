@@ -62,16 +62,16 @@ const experiences = [
       "Women Guides",
     ],
   },
-  {
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&h=400&fit=crop",
-    title: "Spiritual Journeys",
-    tagline: "Reconnect with culture, heritage and inner peace.",
-    highlights: [
-      "Temple Visits",
-      "Cultural Insights",
-      "Guided Pilgrimages",
-    ],
-  },
+  // {
+  //   image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&h=400&fit=crop",
+  //   title: "Spiritual Journeys",
+  //   tagline: "Reconnect with culture, heritage and inner peace.",
+  //   highlights: [
+  //     "Temple Visits",
+  //     "Cultural Insights",
+  //     "Guided Pilgrimages",
+  //   ],
+  // },
 ];
 
 const TravelExperienceGrid = () => {

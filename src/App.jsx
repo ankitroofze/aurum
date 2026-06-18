@@ -8,12 +8,14 @@ import Cruise from "./pages/cruise";
 import Theme from "./pages/theme";
 import VisaAssistance from "./pages/visa-Assistance";
 import Insurance from "./pages/Insurance";
+import ScrollToTop from "./components/common/ScrollToTop";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />

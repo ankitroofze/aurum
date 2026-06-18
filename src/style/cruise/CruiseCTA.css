@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 .cruise-cta {
@@ -17,6 +18,8 @@
   align-items: center;
   overflow: hidden;
   font-family: "Inter", sans-serif;
+  margin-top: 0px; /* FIXED: Upar wale section se premium gap de diya hai */
+  padding-top: 20px;
 }
 
 /* Simple overlay - only for text readability */
@@ -40,7 +43,7 @@
    ============================================== */
 .cta-tag {
   display: inline-block;
-  color: #d4af37;
+  color: #eab308; /* FIXED: Ludo Yellow Color match kiya header tag ke liye */
   font-size: 11px;
   letter-spacing: 2px;
   font-weight: 700;
@@ -71,7 +74,7 @@
 }
 
 /* ==============================================
-   BUTTONS - Chota
+   BUTTONS - Blue Default, Yellow on Hover
    ============================================== */
 .cta-buttons {
   display: flex;
@@ -84,30 +87,33 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #d4af37;
-  color: #0a1a2e;
+  background: #0d4c92; /* FIXED: Default color ab Dark Blue hai */
+  color: #ffffff;      /* Text white kiya blue par readability ke liye */
   border: none;
   padding: 12px 28px;
   font-size: 14px;
   font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .primary-btn:hover {
   transform: translateY(-3px);
-  background: #c49a2a;
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+  background: #eab308; /* FIXED: Hover karne par Ludo Yellow ho jayega */
+  color: #0a1a2e;      /* Yellow par text dark kiya clear visibility ke liye */
+  box-shadow: 0 8px 25px rgba(234, 179, 8, 0.3);
 }
 
-.primary-btn svg {
+/* Icon configuration in Button */
+.primary-btn svg, .primary-btn i {
   font-size: 14px;
-  transition: transform 0.3s ease;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.primary-btn:hover svg {
-  transform: translateX(4px);
+.primary-btn:hover svg, .primary-btn:hover i {
+  transform: translateX(4px); /* Hover pe arrow icon mast tarike se aage move hoga */
 }
 
 .secondary-btn {
@@ -127,11 +133,12 @@
 
 .secondary-btn:hover {
   background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.8);
+  border-color: #eab308; /* Secondary btn ki border hover pe yellow subtle hint degi */
+  color: #eab308;
   transform: translateY(-3px);
 }
 
-.secondary-btn svg {
+.secondary-btn svg, .secondary-btn i {
   font-size: 14px;
 }
 
@@ -145,12 +152,14 @@
   
   .cruise-cta {
     min-height: 360px;
+    margin-top: 40px; /* Tablet margin reset */
   }
 }
 
 @media (max-width: 768px) {
   .cruise-cta {
     min-height: 320px;
+    margin-top: 30px; /* Mobile margin adjustment */
   }
   
   .cruise-content {

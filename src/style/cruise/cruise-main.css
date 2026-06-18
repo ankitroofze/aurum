@@ -1,3 +1,4 @@
+
 /* ==============================================
    cruise-main.css
    Signature Global Cruise Destinations - Card Styles
@@ -11,7 +12,7 @@
 }
 
 body {
-  background:white;
+  background: white;
   font-family: 'Inter', sans-serif;
   display: flex;
   align-items: center;
@@ -26,6 +27,8 @@ body {
   width: 100%;
   margin: 0 auto;
   background: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 60px;
 }
 
 /* Headline */
@@ -66,7 +69,7 @@ body {
 .cards-row {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem; /* FIXED: Cards ke beech ka gap badha kar 1rem se 2rem kiya */
   justify-content: center;
   align-items: stretch;
   flex-wrap: nowrap;
@@ -77,7 +80,7 @@ body {
 .card-wrapper {
   flex: 1;
   min-width: 0;
-  max-width: 300px;
+  max-width: 320px; /* FIXED: Gap ke sath clean structure rakhne ke liye width minor adjust ki */
   transition: transform 0.3s ease, box-shadow 0.4s ease;
   border-radius: 16px;
 }
@@ -294,11 +297,14 @@ body {
 
 /* responsive - maintain horizontal on all screens */
 @media (max-width: 900px) {
+  .cruise-destinations-section {
+    padding-bottom: 50px;
+  }
   .cards-row {
-    gap: 0.8rem;
+    gap: 1.2rem; /* Tablet pe gap thoda responsive manage kiya */
   }
   .card-wrapper {
-    max-width: 240px;
+    max-width: 250px;
   }
   .inflected-cardInner {
     height: 160px;
@@ -312,13 +318,17 @@ body {
 }
 
 @media (max-width: 768px) {
+  .cruise-destinations-section {
+    padding-bottom: 40px;
+  }
   .cards-row {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1.5rem; /* Mobile wrapping par gaps control kiya */
   }
   .card-wrapper {
     min-width: 260px;
-    max-width: 280px;
+    max-width: 290px;
   }
   .inflected-cardInner {
     height: 180px;
@@ -331,3 +341,4 @@ body {
     max-width: 100%;
   }
 }
+

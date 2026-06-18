@@ -103,11 +103,12 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-
-      <div className="footer-bottom">
-        © Copyright 2026 All rights reserved by Aurum voyages | Developed by
-Roofze Digital Hub LLP
-      </div>
+<div className="footer-bottom">
+  © Copyright 2026 All rights reserved by Aurum voyages | Developed by{' '}
+  <a href="https://www.roofze.com" target="_blank" rel="noopener noreferrer" className="footer-link">
+    Roofze Digital Hub LLP
+  </a>
+</div>
 {/* 
       <div
         className="scroll-top"
