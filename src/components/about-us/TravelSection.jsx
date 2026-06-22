@@ -47,12 +47,12 @@ const TravelSection = () => {
           <span className="sub-title">Explore The World With Us</span>
 
           <h2>
-            The Perfect Vacation<br />
-            Come True With Our Travel Agency
+            The Perfect Vacation Come True<br />
+             With Our Travel Agency
           </h2>
 
           <p>
-            When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book. It Has Survived Not Only Five Centuries But Also The Leap Into Electronic Typesetting Remaining Essentially Unchanged.
+            When An Unknown Printer Took A Galley Of Type And Scrambled It To Make <br /> A Type Specimen Book. It Has Survived Not Only Five Centuries But Also The <br /> Leap Into Electronic Typesetting Remaining Essentially Unchanged.
           </p>
 
           <button className="travel-btn">

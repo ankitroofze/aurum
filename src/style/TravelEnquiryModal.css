@@ -13,7 +13,7 @@
   padding: 20px;
 }
 
-/* Base Container Settings (No Scroll Rule) */
+/* Base Container Settings */
 .travel-card-container {
   background: #ffffff;
   width: 100%;
@@ -26,7 +26,7 @@
   overflow: hidden;
 }
 
-/* Height Variations to avoid scrollbars */
+/* Height Variations to avoid scrollbars on Desktop */
 .mini-card {
   max-width: 380px;
   padding: 30px 24px;
@@ -68,7 +68,7 @@
 }
 .mini-card-content h3 {
   font-size: 19px;
-  color: #0f172a;
+  color: #1e3a8a;
   font-weight: 700;
   margin-bottom: 8px;
 }
@@ -80,7 +80,7 @@
 }
 .mini-action-btn {
   background: #eab308;
-  color: #0f172a;
+  color: #1e3a8a;
   border: none;
   padding: 10px 24px;
   font-weight: 600;
@@ -106,7 +106,7 @@
 }
 .travel-modal-header h2 {
   font-size: 21px;
-  color: #0f172a;
+  color: #1e3a8a;
   font-weight: 700;
 }
 .travel-modal-header p {
@@ -146,7 +146,7 @@
   border-radius: 8px;
   background: #f8fafc;
   outline: none;
-  color: #0f172a;
+  color: #1e3a8a;
 }
 .input-group input:focus, 
 .input-group select:focus, 
@@ -242,7 +242,7 @@
 }
 .travel-submit-btn:hover {
   background: #eab308;
-  color: #0f172a;
+  color: #1e3a8a;
   box-shadow: 0 5px 15px rgba(234, 179, 8, 0.3);
 }
 
@@ -294,11 +294,11 @@
 .layer-8 { width: 3px;  height: 3px;  background: rgba(255, 255, 255, 0.1); }
 
 /* ==============================================
-   CIRCULAR FLOATING BADGE (Perfect above WhatsApp)
+   CIRCULAR FLOATING BADGE
    ============================================= */
 .travel-circle-floating-badge {
   position: fixed;
-  bottom: 105px; /* Fixed: WhatsApp shortcut icon standard bottom ke exact upar standard fit placement */
+  bottom: 105px;
   right: 25px;
   width: 54px;
   height: 54px;
@@ -312,14 +312,19 @@
   box-shadow: 0 10px 25px rgba(13, 76, 146, 0.4);
   cursor: pointer;
   z-index: 99999;
+  animation: enquiryFloat 2.4s ease-in-out infinite;
 }
 .travel-circle-floating-badge:hover {
   background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
-  color: #0f172a;
+  color: #1e3a8a;
   box-shadow: 0 10px 25px rgba(234, 179, 8, 0.4);
 }
 
-/* Hover Tooltip Text */
+@keyframes enquiryFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
 .badge-tooltip {
   position: absolute;
   right: 65px;
@@ -356,11 +361,241 @@
 .animated-field { animation: formFieldIn 0.25s ease-out; }
 @keyframes formFieldIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
 
-/* Mobile Adaptability */
-@media (max-width: 480px) {
-  .travel-enquiry-form { grid-template-columns: 1fr; }
-  .full-width { grid-column: span 1; }
-  .counters-row { flex-direction: column; gap: 8px; }
-  .dot-matrix-wrapper { display: none; }
-  .travel-circle-floating-badge { bottom: 95px; right: 15px; width: 48px; height: 48px; }
+/* ==============================================
+   CUSTOM SELECT & SUCCESS CARD
+   ============================================== */
+select.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23475569%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%; 
+  background-size: 10px auto;
+  padding-right: 30px; 
+}
+
+.error-text {
+  color: #ef4444;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.success-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 10px;
+}
+.success-icon-box {
+  margin-bottom: 20px;
+  animation: scaleUpIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.success-card-content h3 {
+  font-size: 24px;
+  color: #1e3a8a;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.success-card-content p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+@keyframes scaleUpIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ==============================================
+   🔥 ADVANCED MOBILE RESPONSIVENESS (UPDATED) 🔥
+   ============================================== */
+@media (max-width: 576px) { /* Breakpoint thoda bada kiya taaki sabhi phones cover ho jayein */
+  .travel-modal-overlay {
+    padding: 15px; /* Mobile par thodi space bachane ke liye */
+  }
+
+  .travel-card-container {
+    border-radius: 20px;
+    max-height: 90vh; /* Agar phone ki height kam ho, to form screen se bahar nahi jayega */
+    overflow-y: auto; /* Internal scroll enable kiya choti screens ke liye */
+  }
+
+  .expanded-card {
+    padding: 24px 16px; /* Left/Right padding kam ki taaki inputs wide ban sakein */
+  }
+
+  .travel-enquiry-form { 
+    grid-template-columns: 1fr; /* Form inputs ko 1 ke neeche 1 kar diya */
+    gap: 12px; 
+  }
+  
+  .full-width { 
+    grid-column: span 1; 
+  }
+
+  /* Inputs ko Touch-Friendly banaya (iOS Zoom prevent karne ke liye 16px zaroori hota hai) */
+  .input-group input, 
+  .input-group select, 
+  .input-group textarea {
+    padding: 10px 12px;
+    font-size: 14px; 
+  }
+
+  .travel-modal-header h2 {
+    font-size: 19px; 
+  }
+
+  /* Counter section mobile par acche se dikhe uske liye */
+  .counters-row { 
+    flex-direction: column; 
+    gap: 10px; 
+  }
+  
+  .counter-box {
+    background: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+  }
+
+  /* Buttons for + / - unko touch karne mein asani hogi */
+  .counter-controls button {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .travel-submit-btn {
+    padding: 12px; /* Button bada kiya taaki tap karne me asan ho */
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .dot-matrix-wrapper { 
+    display: none; /* Mobile par dots hata diye taaki clutter na ho */
+  }
+  
+  .travel-circle-floating-badge { 
+    bottom: 85px; /* Position thodi adjust ki mobile ke hisab se */
+    right: 15px; 
+    width: 50px; 
+    height: 50px; 
+  }
+}
+
+/* ==============================================
+   🔥 PREMIUM MOBILE RESPONSIVENESS (APP-STYLE BOTTOM SHEET) 🔥
+   ============================================== */
+@media (max-width: 600px) {
+  
+  /* 1. Overlay ko bottom-align kar diya */
+  .travel-modal-overlay {
+    align-items: flex-end; /* Form ko bottom me chipka dega */
+    padding: 0; /* Side ka gap hata diya */
+    background: rgba(0, 0, 0, 0.6); /* Thoda dark background */
+  }
+
+  /* 2. Container ko Bottom Sheet bana diya */
+  .travel-card-container {
+    max-width: 100% !important; /* Poori width cover karega */
+    border-radius: 24px 24px 0 0 !important; /* Sirf upar se gol, neeche se flat */
+    max-height: 85vh; /* Screen ka 85% hissa lega */
+    overflow-y: auto; /* Scroll enable */
+    animation: slideUpSheet 0.35s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Slide up animation for mobile */
+  @keyframes slideUpSheet {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  /* 3. Padding Adjustments */
+  .expanded-card {
+    padding: 24px 20px 30px; /* Thoda saaf space diya */
+  }
+
+  .mini-card {
+    padding: 30px 20px;
+    border-radius: 24px 24px 0 0 !important;
+  }
+
+  /* 4. Form Layout ko Column me convert kiya */
+  .travel-enquiry-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; /* Inputs ke beech gap badhaya */
+  }
+  
+  .full-width { 
+    grid-column: span 1; /* Grid bypass */
+  }
+
+  /* 5. Inputs ko touch-friendly aur iOS Zoom-proof banaya */
+  .input-group input, 
+  .input-group select, 
+  .input-group textarea {
+    padding: 12px 14px; /* Finger tap area badhaya */
+    font-size: 16px !important; /* 16px zaroori hai taaki iPhone par zoom na ho */
+    border-radius: 10px;
+  }
+
+  /* 6. Counters ko mobile ke liye better design kiya */
+  .counters-row { 
+    flex-direction: row; 
+    gap: 12px; 
+  }
+  
+  .counter-box {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    flex-direction: column; /* Label upar, buttons neeche */
+    align-items: center;
+    gap: 8px;
+  }
+
+  .counter-controls button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  /* 7. Submit Button (Bada aur clear) */
+  .travel-submit-btn {
+    padding: 15px; 
+    font-size: 15px;
+    border-radius: 12px;
+    margin-top: 10px;
+  }
+
+  /* 8. Close Button Position Fix */
+  .travel-modal-close {
+    top: 15px;
+    right: 15px;
+    background: #f1f5f9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  /* Header adjustments */
+  .travel-modal-header h2 {
+    font-size: 20px; 
+  }
+
+  /* Floating icon ki position fix for mobile */
+  .travel-circle-floating-badge { 
+    bottom: 90px; 
+    right: 15px; 
+    width: 50px; 
+    height: 50px; 
+  }
+
+  .dot-matrix-wrapper { 
+    display: none; /* Desktop dots mobile par hata diye */
+  }
 }

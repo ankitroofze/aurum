@@ -8,11 +8,13 @@ import "../../style/home/HeroSection.css";
 const HeroSection = () => {
 
   const images = [
-    "https://wallpaperaccess.com/full/1881700.jpg",
-    "https://img.goodfon.com/wallpaper/big/c/6c/architecture-baroda-gujarat-heritage-historic-historical-mon.webp",
-    "https://images.hdqwalls.com/wallpapers/travel-hd.jpg",
-    "https://www.larolandiere.com/wp-content/uploads/2024/12/VOYAGE-TOURS-COUPLE-1920x1080.webp",
-    "https://images.winalist.com/blog/wp-content/uploads/2022/02/15102150/loire_head.jpg"
+    "https://images.pexels.com/photos/5589575/pexels-photo-5589575.jpeg",
+    "https://images.pexels.com/photos/17935005/pexels-photo-17935005.jpeg",
+    "https://images.pexels.com/photos/20095151/pexels-photo-20095151.jpeg",
+    "https://images.pexels.com/photos/13900611/pexels-photo-13900611.jpeg",
+    "https://images.pexels.com/photos/34534796/pexels-photo-34534796.jpeg",
+    "https://images.pexels.com/photos/19063439/pexels-photo-19063439.jpeg"
+    
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);

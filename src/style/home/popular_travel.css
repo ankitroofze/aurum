@@ -21,7 +21,7 @@
   margin: 0 auto;
   text-align: center;
   padding-top: 70px;
-  margin-left: 350px;
+  margin-left: 320px;
   position: relative;
   z-index: 2;
   font-family: 'Roboto', sans-serif;
@@ -470,7 +470,12 @@
   .popular-description {
     font-size: 13px;
   }
-  
+  .travel-action-btn {
+        width: 100%;
+        min-width: 100%;
+        padding: 16px 22px;
+        margin-right: 20px;
+    }
   .popular-sticker {
     width: 300px !important;
   }
@@ -478,6 +483,7 @@
   .popular-btn {
     padding: 10px 28px;
     font-size: 15px;
+    
   }
   
   .popular-btn span {

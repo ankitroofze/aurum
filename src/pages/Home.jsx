@@ -13,29 +13,25 @@ import WhyWorkWithUs from "../components/home/WhyWorkWithUs";
 // import StatsSection from "../components/home/StatsSection";
 // import ExploreDestinations from "../components/home/ExploreDestinations";
 import DownloadApp from "../components/home/DownloadApp";
-import WhatsAppFloat from "../components/common/WhatsAppFloat";
-import TravelEnquiryModal from "../components/common/TravelEnquiryModal";
 
 const Home = () => {
   return (
     <div className="app-wrapper">
       <div className="app-container">
         <Header />
-        <TravelEnquiryModal />
-        <WhatsAppFloat />
         <HeroSection />
         <TravelShowcase />
          <WhyWorkWithUs />
         <PopularTravel />
         <PromoSection />
         <TravelDestinations />
-        <ExploreWorld />
+        {/* <ExploreWorld /> */}
         <Testimonials />
         {/* <DestinationSection /> */}
         
         {/* <StatsSection /> */}
         {/* <ExploreDestinations /> */}
-        <DownloadApp />
+        {/* <DownloadApp /> */}
 
         <Footer />
       </div>

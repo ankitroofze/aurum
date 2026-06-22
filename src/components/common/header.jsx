@@ -70,25 +70,29 @@ const Header = () => {
 
           {/* DESKTOP MENU */}
           <nav className="desktop-nav">
-            <Link to="/" className="nav-link">
+            {/* <Link to="/" className="nav-link">
               Home
-            </Link>
-
-            <Link to="/domestic-travels" className="nav-link">
-              Domestic Travels
-            </Link>
-
-            <Link to="/international-travels" className="nav-link">
-              International Travels
-            </Link>
+            </Link> */}
 
             <Link to="/about-us" className="nav-link">
               About Us
             </Link>
 
-            <Link to="/contact" className="nav-link">
-              Contact
+            <Link to="/domestic-travels" className="nav-link">
+              Domestic tours  
             </Link>
+
+            <Link to="/international-travels" className="nav-link">
+              International tours
+            </Link>
+
+            <Link to="/cruise-package" className="nav-link">Cruise </Link>
+
+             <Link to="/visa-assistance" className="nav-link">visa-assistance  </Link>
+
+              <Link to="/travel-insurance" className="nav-link">travel</Link>
+
+            
 
             {/* OTHERS DROPDOWN - Sabse last me */}
             <div 
@@ -103,10 +107,9 @@ const Header = () => {
 
               {isDesktopDropdownOpen && (
                 <div className="dropdown-menu">
-                  <Link to="/themed-packages" className="dropdown-item">THEMED PACKAGES</Link>
-                  <Link to="/cruise-package" className="dropdown-item">CRUISE PACKAGE</Link>
-                  <Link to="/visa-assistance" className="dropdown-item">VISA ASSISTANCE</Link>
-                  <Link to="/travel-insurance" className="dropdown-item">TRAVEL INSURANCE</Link>
+                 <Link to="/contact" className="dropdown-item">
+                     Contact
+                 </Link>
                 </div>
               )}
             </div>

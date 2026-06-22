@@ -2,6 +2,12 @@ import React from "react";
 import "../../style/home/PromoSection.css";
 
 const PromoSection = () => {
+  const videoUrl = "https://youtube.com/shorts/UPnzC6-hdMc?si=6K1E2I5RsupABSX2";
+
+  const handlePlayClick = () => {
+    window.open(videoUrl, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="promo-wrapper">
 
@@ -14,7 +20,7 @@ const PromoSection = () => {
         />
 
         <div className="play-btn-wrapper">
-          <button className="play-btn">
+          <button className="play-btn" onClick={handlePlayClick} aria-label="Play promo video">
             <span className="play-icon">▶</span>
           </button>
         </div>

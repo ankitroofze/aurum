@@ -9,6 +9,8 @@ import Theme from "./pages/theme";
 import VisaAssistance from "./pages/visa-Assistance";
 import Insurance from "./pages/Insurance";
 import ScrollToTop from "./components/common/ScrollToTop";
+import TravelEnquiryModal from "./components/common/TravelEnquiryModal";
+import WhatsAppFloat from "./components/common/WhatsAppFloat";
 import "./App.css";
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <ScrollToTop />
+        <TravelEnquiryModal />
+        <WhatsAppFloat />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />

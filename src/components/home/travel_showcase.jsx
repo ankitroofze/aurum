@@ -14,11 +14,10 @@ const TravelShowcase = () => {
 
         {/* Left Content */}
         <div className="showcase-content">
-          <span className="sub-heading">Dream Your Next Trip</span>
+          <span className="sub-heading">Dream Your Next Adventure</span>
 
           <h2>
-            Discover When Even <br />
-            You Want To Go
+            Discover The Perfect Time To Explore Your Dream Destination
           </h2>
 
           <p className="showcase-text">

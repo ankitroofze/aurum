@@ -17,7 +17,7 @@ const globalDestinations = [
 const domesticDestinations = [
   { id: 101, title: "AGRA TAJ MAHAL", image: "https://media.istockphoto.com/id/586047840/photo/taj-mahal-agra.jpg?s=170667a&w=0&k=20&c=5eO4RAx3931JTS3s5iJ4JrT3Pm4TUZRS2hobDI7okno=" },
   { id: 102, title: "ATAL TUNNEL IN MANALI", image: "https://thenewshimachal.com/wp-content/uploads/2024/01/Snowfall-at-Atal-Tunnel.jpg" },
-  { id: 103, title: "NAINITAL LAKE", image: "https://media.cdn.tripadvisor.com/media/photo-s/15/f3/7a/05/dsc-1028-largejpg.jpg" },
+  { id: 103, title: "NAINITAL LAKE", image: "https://i.pinimg.com/originals/d1/d0/81/d1d081f3b649bcf26c0051b63855ee5f.jpg" },
   { id: 104, title: "AMER FORT", image: "https://www.india-a2z.com/images/city_palace.jpg" },
   { id: 105, title: "DESERT CAMP AT JAISALMER", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/2a/04/c5/getlstd-property-photo.jpg?w=1400&h=-1&s=1" },
   { id: 106, title: "STATUE OF UNITY", image: "https://journeybees.in/uploads/0000/19/2022/10/01/statue-of-unity-featured.jpg" },

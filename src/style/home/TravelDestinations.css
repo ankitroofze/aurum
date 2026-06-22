@@ -218,7 +218,9 @@
 @media (max-width: 480px) {
   .main-title { font-size: 30px; }
   .description { font-size: 14px; }
-  
+  .travel-section {
+        padding: 5px 2px 5px 2px;
+    }
   .travel-card {
     width: 190px;
     margin-right: 15px;

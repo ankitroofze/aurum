@@ -26,8 +26,8 @@ const ContactSection = () => {
               <span className="value"> +123 9998 000</span>
             </p>
             <p>
-              <span className="label">Website :</span>
-              <span className="value"> www.info.com</span>
+              <span className="label">Phone No :</span>
+              <span className="value"> phone number</span>
             </p>
             <p>
               <span className="label">E-Mail :</span>
@@ -40,6 +40,7 @@ const ContactSection = () => {
           </div>
 
           {/* Fully Responsive Map */}
+          {/*
           <div className="map-container">
             <iframe
               title="map"
@@ -47,6 +48,7 @@ const ContactSection = () => {
               loading="lazy"
             ></iframe>
           </div>
+          */}
         </div>
 
         {/* ========================================================

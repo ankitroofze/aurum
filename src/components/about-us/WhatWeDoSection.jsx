@@ -41,11 +41,11 @@ const WhatWeDoSection = () => {
         <div className="heading-wrapper">
           <span className="sub-title">What We Do</span>
           <h3 className="main-title">
-            We Arrange the Best Tour<br />
+            We Arrange the Best Tour
             Ever Possible
           </h3>
           <p className="description">
-            when an unknown printer took a galley of type and scrambled make type specimen bookhas survived not only five.
+            when an unknown printer took a galley of type and scrambled <br />  make type specimen bookhas survived not only five.
           </p>
         </div>
 
